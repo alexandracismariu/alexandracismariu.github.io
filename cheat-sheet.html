@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <title>Information</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light container fixed-top shadow">
+
+        <a class="navbar-brand" href="#home">Home</a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="navbar-brand" href="#linux">Linux</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="#github">GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="#mysql">MySQL</a>
+                </li>
+
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#"></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                    </div>
+                </li> -->
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <hr id="home">
+
+    <div class="container bg-info mt-5">
+           
+        <h1  id="linux" class="p-4 mb-4 font-italic border-bottom">
+            Linux commands
+        </h1>
+
+        <div class="blog-post">
+
+            <div>
+
+                <h2 class="blog-post-title p-3">1. Opening a terminal</h2>
+                <h3 class="blog-post-title p-3">1.1. A sense of location</h3>
+
+                <div>
+                    <h5>1.1.1. Comanda <b>pwd</b> ne spune exact care este directorul curent, (în ce fișier ne aflăm).</h5>
+                    <small>- începând cu rădăcina; rădăcina este baza principală a unui sistem Linux. Rădăcina este indicată printr-o linie oblică
+                    (/).</small>
+                
+                    <pre class="alert alert-secondary" role="alert">
+                        <code class="lang-auto">pwd</code><br>
+                    </pre>
+
+                    <p class="font-weight-bold">pwp = print working directory</p>
+                </div><br>
+
+                <div>
+                    <h5>1.1.2. Comanda <b>cd</b> este folosită pentru a merge într-un director.</h5>
+                    <pre class="alert alert-secondary" role="alert">
+                        <code class="lang-auto">cd /downloads</code>
+                    </pre>
+                
+                    <h5 class="pt-3">Comanda <b>cd</b> schimba directorul de lucru</h5>
+                    <p class="font-weight-bold">cd = change directory</p>
+                </div>
+                    
+                <div>
+                    <h5>Din directorul rădăcină, următoarea comandă vă va muta în directorul „acasă"</h5>
+                    <pre class="alert alert-secondary" role="alert">
+                        <code class="lang-auto">cd home</code>
+                        <code class="lang-auto">pwp</code>
+                    </pre>
+                </div>
+
+               <div>
+                   <h5> O scurtătură rapidă pentru a ajunge la directorul "acasă" este tastând doar <b>cd</b> </h5>
+                   <pre class="alert alert-secondary" role="alert">
+                        <code class="lang-auto">cd</code>
+                        <code class="lang-auto">pwp</code>
+                    </pre>
+                </div>
+
+               <div>
+                    <h5>Pentru a merge la directorul părinte, în acest caz înapoi la „/”, folosiți sintaxa specială a două puncte <b>(..)</b></h5>
+                    <pre class="alert alert-secondary" role="alert">
+                        <code class="lang-auto">cd ..</code>
+                        <code class="lang-auto">pwp</code>
+                    </pre>
+               </div>
+
+                <div>
+                    <h5>Pentru a vă deplasa prin mai multe niveluri de directoare părinți, puteți utiliza <b>(..)</b> de mai multe ori</h5>
+                    <pre class="alert alert-secondary" role="alert">
+                        <code class="lang-auto">cd ../..</code>
+                        <code class="lang-auto">pwp</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <h5>Dacă dorim să mergem direct din directorul nostru principal în directorul „etc” (care se află direct în rădăcina
+                    sistemului de fișiere), putem folosi:</h5>
+                    <pre class="alert alert-secondary" role="alert">
+                        <code class="lang-auto">cd</code>
+                        <code class="lang-auto">pwp</code>
+                        <code class="lang-auto">cd ../..etc</code>
+                        <code class="lang-auto">pwp</code>
+                    </pre>
+                </div>
+
+            </div>
+            <br>
+
+            <div>
+                <h3 class="blog-post-title p-3">1.2. Relative and absolute paths</h3>
+                <h5>Orice cale care începe <b>/</b> înainte este o cale absolută.</h5>
+                 
+                <pre class="alert alert-secondary" role="alert">
+                    <code class="lang-auto"></code><br>
+                </pre>
+            </div>
+            <br>
+            
+            <div>
+                <h5>Comanda <b>ls</b> ne afișează conținutul directorului curent. Putem vedea toate fișierele ascunse.</h5>
+
+                <pre class="alert alert-secondary" role="alert">
+                    <code class="lang-auto">ls</code>
+                </pre>
+            
+                <p class="font-weight-bold">ls = list their contents</p>
+            </div>
+            <br>
+
+            <div> 
+                <h2 class="blog-post-title">2. Creating folders and files</h2>
+             
+
+                <div>
+                    <h3>2.1. Comanda "mkdir" este utilizată atunci când trebuie să creați un folder sau un director.</h3>
+                    <pre class="alert alert-secondary" role="alert">
+                        <code class="lang-auto">mkidr /tmp/tutorial</code><br>
+                        <code>cd /tmp/tutorial</code>
+                    </pre>
+
+                    <p class="font-weight-bold">mkidr = make directory</p>
+
+                    <small>Observați utilizarea unei căi absolute, pentru a asigura crearea directorului tutorial în interiorul lui / tmp. Fără / la început, comanda mkdir ar încerca să găsească un director tmp în directorul de lucru curent, apoi să încerce să creeze un director tutorial în interiorul acestuia. Dacă nu s-a găsit un director tmp, comanda nu ar reuși.</small>
+                </div>
+
+                <div>
+                    <h5 class="pt-3">2.2. Creează câteva subdirectoare:</h5>
+
+                    <pre class="alert alert-secondary" role="alert">
+                        <code class="lang-auto">mkdir dir1 dir2 dir3</code>
+                    </pre>
+
+                    <small>Până acum, am văzut doar comenzi care funcționează pe cont propriu (cd, pwd) sau care au un singur articol
+                        ulterior (cd /, cd ~ / desktop). Dar de această dată am adăugat trei lucruri după comanda mkdir. Aceste lucruri sunt
+                        denumite parametri sau argumente.Comanda mkdir se așteaptă la cel puțin un argument, în timp ce comanda cd poate
+                        funcționa cu zero sau unul, dar nu mai
+                        mult.</small>
+                    
+                    <p>Observați că mkdir a creat toate folderele dintr-un singur director. Nu a creat dir3 în interiorul dir2 în interiorul
+                        dir1 sau în orice altă structură. Dar, uneori, este util să poți face exact asta, iar mkdir are o cale:</p>
+                </div>
+
+               
+                <div>
+                    <h5>2.3. Creează mai multe directoare doar trecându-le ca argumente de separare la comanda mkdir.</h5>
+                    <pre class="alert alert-secondary" role="alert">
+                        <code class="lang-auto">mkdir -p dir4/dir5/dir6</code>
+                    </pre>
+
+                    <p>De această dată veți vedea că doar dir4 a fost adăugat la listă, deoarece dir5 este în interiorul ei, iar dir6 este în
+                    interiorul acesteia.</p>
+
+                    <small>„-p” pe care l-am folosit se numește <b>option</b> sau <b>switch</b> (în acest caz înseamnă „creați și directoarele părinte”).
+                    Opțiunile sunt utilizate pentru a modifica modul în care operează o comandă, permițând unei singure comenzi să se
+                    comporte într-o varietate de moduri diferite.</small>
+                </div>
+
+                <div>
+                    <h5 class="pt-3">2.4. Creează un director cu un spațiu în nume folosind <b>""</b>, <b>''</b> sau <b>\</b></h5>
+
+                    <pre class="alert alert-secondary" role="alert">
+                        <code class="lang-auto">mkdir "folder 1"</code>
+                        <code class="lang-auto">mkdir 'folder 2'</code>
+                        <code class="lang-auto">mkdir folder\ 3</code>
+                        <code class="lang-auto">"folder 4" "folder 5"</code>
+                        <code class="lang-auto">-p "folder 6"/"folder 7"</code>
+                        <code class="lang-auto">ls</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <h5>3. Moving and manipulating files</h5>
+
+                    <div>
+                        <h2>3.1. Comanda <b>mv</b> redenumesțe sau mută fișierele</h2>
+                    
+                        <pre class="alert alert-secondary" role="alert">
+                            <code class="lang-auto">mv</code>
+                        </pre>
+
+                        <pre class="alert alert-secondary" role="alert">
+                            <code class="lang-auto">mv copytest.txt newcopytest.txt</code>
+                        </pre>
+
+                        <p class="font-weight-bold">mv = rename or move files</p>
+                    </div>
+                    
+                    <div>
+                        <h3>3.2. Deleting files and folders</h3>
+                        <h2>Comanda <b>rm</b> este folosit pentru ștergerea unui fișier complet</h2>
+                        <h2>Comanda <b>rmdir</b> este folosită pentru ștergerea unui director gol.</h2>
+
+                        <pre class="alert alert-secondary" role="alert">
+                            <code class="lang-auto">rm -r folder_6</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+    </div>
+
+    <div class="container bg-warning mt-5">
+        <h1 id="github" class="p-4 mb-4 font-italic border-bottom">
+            GitHub commands
+        </h1>
+
+        <div>
+            <h2>1. Add files</h2>
+
+            <h5>Comanda <b>add</b> se folosește pentru a adăuga un fișier individual sau grupuri de fișiere.</h5>
+
+            <div>
+                <h5>Pentru a adăuga fișierul index.html pe care l-am modificat folosesc:</h5>
+                <pre class="alert alert-secondary" role="alert">
+                    <code class="lang-auto">git add index.html</code><br>
+                </pre>
+            </div>
+
+            <div>
+                <h5>Pentru a adăuga toate fișierele pe care le-am editat, în același timp, pot utiliza:</h5>
+                <pre class="alert alert-secondary" role="alert">
+                    <code class="lang-auto">git add --all</code><br>
+                </pre>
+            </div>
+        
+        </div><br>
+
+        <div>
+            <h2>2. Commit files</h2>
+        
+            <h5>Comanda <b>commit</b> necesită un mesaj de validare care descrie modificările pe care le-am făcut în acel fișier.</h5>
+        
+            <div>
+                <h5>Pot crea un mesaj scurt folosind indicatorul <b>-m</b>. Mesajul ar trebui să exprime exact ce s-a schimbat și de ce.</h5>
+                <pre class="alert alert-secondary" role="alert">
+                    <code class="lang-auto">git commit -m "Editing the index to add the CV in Romanian language"</code><br>
+                </pre>
+            </div>
+        </div><br>
+
+        <div>
+            <h2>3. Push changes to GitHub</h2>
+        
+            <h5>Până în prezent, am modificat doar copia noastră locală a depozitului. Pentru a adăuga modificările la fișierele mele
+            git repo de pe computer la versiunea mea repository de pe GitHub, trebuie să folosim <b>push</b>.</h5>
+        
+            <div>
+                <h5>Pot împinge modificările către GitHub cu:</h5>
+                <pre class="alert alert-secondary" role="alert">
+                    <code class="lang-auto">git push</code><br>
+                </pre>
+            </div>
+        
+            <h5>Îmi va fi solicitat apoi numele de utilizator și parola pentru GitHub.</h5>
+        </div><br>
+
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <body class="bg-light">
+
+    <div class="container">
+
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72"
+                height="72">
+            <h2>Linux - comenzi</h2>
+        
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Your cart</span>
+                    <span class="badge badge-secondary badge-pill">3</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Product name</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Second product</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$8</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Third item</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div class="text-success">
+                            <h6 class="my-0">Promo code</h6>
+                            <small>EXAMPLECODE</small>
+                        </div>
+                        <span class="text-success">-$5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Total (USD)</span>
+                        <strong>$20</strong>
+                    </li>
+                </ul>
+
+                <form class="card p-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Promo code">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-secondary">Redeem</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Billing address</h4>
+                <form class="needs-validation" novalidate="">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">First name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Last name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="username">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@</span>
+                            </div>
+                            <input type="text" class="form-control" id="username" placeholder="Username" required="">
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Your username is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                        <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                        <div class="invalid-feedback">
+                            Please enter a valid email address for shipping updates.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                        <div class="invalid-feedback">
+                            Please enter your shipping address.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                        <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label for="country">Country</label>
+                            <select class="custom-select d-block w-100" id="country" required="">
+                                <option value="">Choose...</option>
+                                <option>United States</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid country.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="state">State</label>
+                            <select class="custom-select d-block w-100" id="state" required="">
+                                <option value="">Choose...</option>
+                                <option>California</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="zip">Zip</label>
+                            <input type="text" class="form-control" id="zip" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Zip code required.
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="same-address">
+                        <label class="custom-control-label" for="same-address">Shipping address is the same as my
+                            billing address</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="save-info">
+                        <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                    </div>
+                    <hr class="mb-4">
+
+                    <h4 class="mb-3">Payment</h4>
+
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked=""
+                                required="">
+                            <label class="custom-control-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input"
+                                required="">
+                            <label class="custom-control-label" for="debit">Debit card</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input"
+                                required="">
+                            <label class="custom-control-label" for="paypal">PayPal</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-name">Name on card</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                            <small class="text-muted">Full name as displayed on card</small>
+                            <div class="invalid-feedback">
+                                Name on card is required
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-number">Credit card number</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Credit card number is required
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-expiration">Expiration</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Expiration date required
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-cvv">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Security code required
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                </form>
+            </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">© 2017-2019 Company Name</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+        </footer>
+    </div>
+    
+    
+
+   
+
+</body> -->
+
+
+
+</html>
