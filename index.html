@@ -39,33 +39,56 @@
             text-indent: 50px;
         }
 
-        #img-size {
-            width: 290px;
-            height: 300px;
+        @media only screen and (max-width: 767px) {
+            .first-name {
+                font-size: 60px;
+            }
+            .last-name {
+                font-size: 60px;
+            }
+            .profesion {
+                font-size: 30px;
+            }
         }
+
+        @media only screen and (min-width: 768px) {
+            .first-name {
+                font-size: 80px;
+            }
+            .last-name {
+                font-size: 80px;
+            }
+            .profesion {
+                font-size: 40px;
+            }
+        }
+
     </style>
 
 </head>
 
 <body>
 
-    <div class="d-flex justify-content-end p-2">
+    <div class="container d-flex justify-content-end p-2">
         <a class="btn btn-danger" href="/cv-bootstrap-ro.html">Română</a>
         <a class="btn btn-outline-danger ml-3" href="/cv-tailwind-eng.html">Tailwind</a>
     </div>
+
+    
 
     <div class="container">
 
         <div class="row mt-5">
 
-            <div class="col-md-5">
-                <img id="img-size" src="https://lh3.googleusercontent.com/HxxwQmraoLd5RiXfMfWeOT029DWoHMwiveCJ7RU7hTu_7tbnI23FfPU11kgEhBW_FdBF8HWBS3jBvS2w3zZJcflQkJyBDUXDVs8yDlsYzkkVS8WDA3zbPGquJNOe3nma0wmG7u2NStqR8SnyIlra804RMvWJdXQ4NwwXtGS-_gOYjUetZztyidsPiia2EFqDTdWq6oEeDnlzFXPTHvirjXNU2CaB0Du5zB7JSzxPHe-V0gkOl7UTibZGtwZ4XY6vFeHKpOcQWtT4eImF0vDKQUdPFgCAZyMQ1DI4Xsn7C41LhCd_WEUs8d6W7NCRd5Lv43kvDH4mOr02KUnFXWYXle9lYe8c8Qs0HBGHlgX0G98NgAJRWk-e8IEVAvnjFqohIQBdBr9vQ_P8zmX7ZuYYffYAnv8A8YPcqu1UGjzs13DFQ6O-HLgf7oQ4BlsiOFD1m1BUYNmc-tBQ2c58ACPyMZx1l-KeFVfwLTvK1ddsf-AT0Jg_ASqNE-IutgL-dqIfVFjqRnEo3jBL-XQWBHANqT3M3OiaWoEK6WbshGZOtR-xd5Q0zlGfrlsVuqbdpzbs-qoWujHFqG4tqvj0diF4QJezSk1OVAWPedWQBOmesD8Hh234pcRgLSEWzXROAB9iA-vrEqgapJucCvVs8g73bFjAT5B26-L1t8g9WFfSG9Dr0mF7PBjuW_ixeS1ThA=w327-h337-no" alt="avatar" class="img-fluid rounded-circle mx-auto d-block">
+            <div class="col-sm-5">
+                <img  class="img-fluid rounded-circle mx-auto d-block" src="https://lh3.googleusercontent.com/HxxwQmraoLd5RiXfMfWeOT029DWoHMwiveCJ7RU7hTu_7tbnI23FfPU11kgEhBW_FdBF8HWBS3jBvS2w3zZJcflQkJyBDUXDVs8yDlsYzkkVS8WDA3zbPGquJNOe3nma0wmG7u2NStqR8SnyIlra804RMvWJdXQ4NwwXtGS-_gOYjUetZztyidsPiia2EFqDTdWq6oEeDnlzFXPTHvirjXNU2CaB0Du5zB7JSzxPHe-V0gkOl7UTibZGtwZ4XY6vFeHKpOcQWtT4eImF0vDKQUdPFgCAZyMQ1DI4Xsn7C41LhCd_WEUs8d6W7NCRd5Lv43kvDH4mOr02KUnFXWYXle9lYe8c8Qs0HBGHlgX0G98NgAJRWk-e8IEVAvnjFqohIQBdBr9vQ_P8zmX7ZuYYffYAnv8A8YPcqu1UGjzs13DFQ6O-HLgf7oQ4BlsiOFD1m1BUYNmc-tBQ2c58ACPyMZx1l-KeFVfwLTvK1ddsf-AT0Jg_ASqNE-IutgL-dqIfVFjqRnEo3jBL-XQWBHANqT3M3OiaWoEK6WbshGZOtR-xd5Q0zlGfrlsVuqbdpzbs-qoWujHFqG4tqvj0diF4QJezSk1OVAWPedWQBOmesD8Hh234pcRgLSEWzXROAB9iA-vrEqgapJucCvVs8g73bFjAT5B26-L1t8g9WFfSG9Dr0mF7PBjuW_ixeS1ThA=w327-h337-no" alt="avatar">
             </div>
 
-            <div class="col-md-7 font-name">
-                <h1 class="display-1">Alexandra</h1>
-                <h2 class="display-2 text-danger text-uppercase border-name">Cismariu</h1>
-                <h3 class="first">Junior Web Developer</h3>
+            <div class="col-sm-7 font-name text-center text-sm-left">
+                <h1 class="first-name">Alexandra</h1>
+                <h2 class="last-name text-danger text-uppercase">Cismariu</h1>
+                <hr class="border border-secondary">
+                <h3 class="profesion first">Junior Web Developer</h3>
             </div>
 
         </div>
@@ -74,53 +97,53 @@
 
             <div class="col-md-5">
 
-                <div class="jumbotron jumbotron-fluid py-4">
+                <div class="jumbotron jumbotron-fluid pt-4 pb-5">
 
                     <div class="container">
 
                         <h3 class="text-danger text-uppercase">Contacts</h3>
 
-                        <div class="row p-3">
+                        <div class="row p-2">
 
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <i class="fas fa-map-marker-alt" style="font-size:30px;color:red"></i>
                             </div>
 
-                            <div class="col-md-10 text-capitalize">
-                                <span>Splaiul Unirii 168 <br> district 4, Bucharest</span>
+                            <div class="col-10 text-capitalize">
+                                <span>Splaiul Unirii 168 district 4, Bucharest</span>
                             </div>
 
                         </div>
 
-                        <div class="row p-3">
+                        <div class="row p-2">
 
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <i class="fas fa-paper-plane" style="font-size:30px;color:red"></i>
                             </div>
 
-                            <div class="col-xl-10">
+                            <div class="col-10 text-break">
                                 <span>alexandra.g.cismariu@gmail.com</span>
                             </div>
 
                         </div>
 
-                        <div class="row p-3">
-                            <div class="col-md-2">
-                                <i class="fas fa-phone-volume" style="font-size:30px;color:red"></i>
+                        <div class="row p-2">
+                            <div class="col-2">
+                                <i class="fas fa-phone-volume" style="font-size:35px;color:red"></i>
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-10">
                                 <span>0756 042 413</span>
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="container pt-5">
+                    <div class="container pt-4">
 
                         <h3 class="text-danger text-uppercase">Activities</h3>
 
-                        <div class="p-3">
+                        <div class="p-2">
 
                             <div class="text-capitalize">
                                 <div class="font-weight-bold">Junior mountain guide instructor</div>
@@ -136,40 +159,41 @@
 
                     </div>
 
-                    <div class="container pt-5 text-capitalize">
+                    <div class="container text-capitalize pt-4">
 
                         <h3 class="text-danger text-uppercase">Hobbies</h3>
 
-                        <div class="row p-3">
+                        <div class="row p-2">
 
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <i class="fas fa-mountain" style="font-size:30px;color:red"></i>
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-10">
                                 <span>Mountain hiking</span>
                             </div>
 
                         </div>
 
-                        <div class="row p-3">
+                        <div class="row p-2">
 
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <i class="fas fa-book" style="font-size:30px;color:red"></i>
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-10">
                                 <span>Reading</span>
                             </div>
 
                         </div>
 
-                        <div class="row p-3">
-                            <div class="col-md-2">
+                        <div class="row p-2">
+
+                            <div class="col-2">
                                 <i class="fas fa-plane" style="font-size:30px;color:red"></i>
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-10">
                                 <span>Traveling</span>
                             </div>
                         </div>
@@ -180,13 +204,13 @@
 
             </div>
 
-            <div class="col-sm-7 py-4">
+            <div class="col-md-7 py-4">
 
-                <div class="container">
+                <div class="">
 
                     <h3 class="text-danger text-uppercase">Objectives</h3>
 
-                    <div class="p-3 text-justify text-tab">
+                    <div class="text-justify text-tab my-3">
 
                         <p class="mb-0">As an engineer I became very passionate about web development and I am looking
                             forward to <b>developing my skills</b> in order
@@ -198,32 +222,32 @@
 
                     </div>
 
-                    <div class="p-2 text-capitalize">
+                    <div class="text-capitalize">
 
                         <h3 class="text-danger text-uppercase">Education</h3>
 
-                        <div class="row p-3">
+                        <div class="row mt-3 ml-1">
 
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <i class="fas fa-graduation-cap" style="font-size:30px;color:red"></i>
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-10">
                                 <span class="font-weight-bold">Master's degree</span>
-                                <p class="text-muted mb-0">University politehnica of Bucharest</p>
+                                <p class="text-muted mb-0">University politehnica <span class="text-lowercase">of</span> Bucharest</p>
                                 <span class="font-italic">2017-2019</span>
                             </div>
 
                         </div>
 
-                        <div class="row p-3">
+                        <div class="row mt-3 ml-1">
 
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <i class="fas fa-graduation-cap" style="font-size:30px;color:red"></i>
                             </div>
 
-                            <div class="col-md-10">
-                                <span class="font-weight-bold">University politehnica of Bucharest</span>
+                            <div class="col-10">
+                                <span class="font-weight-bold">University politehnica <span class="text-lowercase">of</span> Bucharest</span>
                                 <p class="text-muted mb-0">Biotechnical Systems Engineering</p>
                                 <span class="font-italic">2013-2017</span>
                             </div>
@@ -234,41 +258,41 @@
 
                     <div class="">
 
-                        <h3 class="text-danger text-uppercase">Online courses</h3>
+                        <h3 class="text-danger text-uppercase my-3">Online courses</h3>
 
-                        <div class="row p-3">
+                        <div class="row mt-3 ml-1">
 
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <i class="fab fa-free-code-camp" style="font-size:30px;color:red"></i>
                             </div>
 
-                            <div class="col-md-10 text-capitalize">
+                            <div class="col-10 text-capitalize">
                                 <span class="font-weight-bold">FreeCodeCamp.org</span>
                                 <p class="">HTML & CSS responsive web design</p>
                             </div>
 
                         </div>
 
-                        <div class="row p-3">
+                        <div class="row ml-1">
 
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <i class="fas fa-laptop" style="font-size:30px;color:red"></i>
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-10">
                                 <span class="font-weight-bold">LearnJavascript.online</span>
                                 <p class="">Javascript fundamental concepts</p>
                             </div>
 
                         </div>
 
-                        <div class="row p-3">
+                        <div class="row ml-1">
 
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <i class="fas fa-database" style="font-size:30px;color:red"></i>
                             </div>
 
-                            <div class="col-md-10 text-capitalize">
+                            <div class="col-10 text-capitalize">
                                 <span class="font-weight-bold">SQLBolt.com</span>
                                 <p class="">SQL Database Management</p>
                             </div>
