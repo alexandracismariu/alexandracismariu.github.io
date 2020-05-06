@@ -1,0 +1,1891 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <title>bootstrap</title>
+
+    <style>
+        .bg-black {
+            background-color: black;
+        }
+        .bg-gray {
+            background-color: rgb(233, 232, 232);
+        }
+        .text-gray {
+            color: rgb(116, 113, 113);
+        }
+        .bg-bej {
+            background-color: burlywood;
+        }
+        .bg-bronz {
+            background-color: chocolate;
+        }
+        .bg-brown {
+            background-color: brown;
+        }
+        .bg-orange {
+            background-color: orange;
+        }
+        .bg-pink {
+            background-color: orchid;
+        }
+        .bg-purple {
+            background-color: purple;
+        }
+        .bg-yellow {
+            background-color: yellow;
+        }
+        .bg-silver {
+            background-color: silver;
+        }
+        .bg-snow {
+            background-color: rgb(255, 255, 255);
+        }
+        .bg-rainbow {
+            background-image: linear-gradient(to top, red,orange,yellow,green,blue,indigo,violet);
+        }
+        .bg-plaid {
+             background-image: repeating-linear-gradient(to right, white 30%, black 40%);
+        }
+
+        .repeating-linear {
+            background: repeating-linear-gradient(-45deg, black, black 5px, white 5px, white 10px);
+        }
+
+
+        .just-first::first-letter {
+            text-transform: uppercase;
+        }
+
+        .dropdown-red:hover {
+            color: red;
+        }
+
+        #feedback { font-size: 1.4em; }
+        #selectable .ui-selected {border: 2px solid red;}
+        #selectable { list-style-type: none; margin: 0; padding: 0;}
+        #selectable li { margin: 3px; padding: 1px; float: left; width: 30px; height: 30px; font-size: 4em; text-align: center; }
+
+        .slider {
+            color: red;
+            cursor: pointer;
+        }
+
+        .ui-state-active, .ui-button.ui-state-active:hover, .ui-button:active {
+            background-color: red;
+            border: 1px solid red;
+        }
+        .ui-button {
+            width: 58px;
+            height: 25px;
+            font-size: 13.5px;
+            padding: 0px;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .pagination a.active {
+            color: red;
+        }
+
+        .new-in {
+            background-color: #f7f7f7;
+            opacity: 0.8; 
+            color: #000000;
+        }
+
+        .text-block {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: rgb(150, 145, 145);
+            font-size: 35px;
+        }
+
+        .text-block:hover {
+            background-color: black;
+            border-radius: 20px;
+        }
+
+        .tooltip-inner {
+            background-color:rgb(255, 255, 255);
+            color: black;
+            font-size: 11px;
+            text-align: start;
+        }
+
+        .text-truncate {
+            float: left;
+            clear: left;
+        }
+
+        .custom-switch .custom-control-label::before {
+            color: #fff;
+            border-color: rgb(211, 206, 206);
+            background-color: rgb(211, 206, 206);
+            height: 29px;
+            width: 47px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .custom-control-input:checked~.custom-control-label::before {
+            color: #fff;
+            border-color: red;
+            background-color:red;
+        }
+
+        .custom-switch .custom-control-label::after {
+            top: .38rem;
+            left: -1.7rem;
+            width: 25px;
+            height: 25px;
+            background-color:white;
+            border-radius: 50px;
+        }
+
+       #social-container {
+           position: fixed;
+           top: 400px;
+       }
+       .border-color {
+           border: 1px solid rgb(228, 222, 222);
+       }
+
+       #to-top {
+           position: fixed;
+           top: 600px;
+           right: 20px;
+       }
+
+       .filter {
+           height: 210px;
+           overflow-y: scroll;
+       }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg  navbar-light p-0" id="#top">
+
+            <a class="text-secondary" class="navbar-brand p-0 mr-5" href="#">
+                <img src="https://kuponzone.com/ro/wp-content/uploads/2019/08/fashionday-200x114.png" alt="logo">
+            </a>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <ul class="navbar-nav mr-auto text-uppercase font-weight-bold">
+                    <li class="nav-item active">
+                        <a class="nav-link text-danger" href="#">Femei<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">barbati<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">fete<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">baieti<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+
+                <ul class="navbar-nav d-flex justify-content-between w-100">
+
+                    <li>
+                        <form class="d-flex" style="border-bottom: 1px solid black;">
+                            <input class="form-control border-0" type="search" placeholder="Cauta..." aria-label="Search"
+                                style="width: 90px;">
+                            <span><i class="fas fa-search" style="font-size:25px;"></i></span>
+                        </form>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="far fa-user" style="font-size:30px;"></i></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="far fa-question-circle" style="font-size:30px;"></i></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="far fa-heart" style="font-size:30px;"></i></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-bag" style="font-size:30px;"></i></a>
+                    </li>
+
+                </ul>
+            
+            </div>
+
+        </nav>
+
+    </div>
+
+    <div class="bg-black p-3">
+
+        <div class="container text-white ">
+
+            <div class="d-none d-lg-block">
+                <ul class="list-inline text-uppercase font-weight-bold d-flex justify-content-between">
+                    <li class="list-inline-item">  
+                        <a class="text-white" href="#">imbracaminte</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="text-white" href="#">incaltaminte</a>
+                    </li>
+                    <li class="list-inline-item"> 
+                        <a class="text-white" href="#">genti si accesorii</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="text-white" href="#">sport</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="text-white" href="#">premium</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="text-white" href="#">beauty</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="text-white" href="#">home&deco</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="text-danger" href="#">outlet</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="text-white" href="#">branduri</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="text-white" href="#">inspiration</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-end p-2">
+                <small>Fashion Days foloseste cookie-uri si continuarea sesiunii pe acest site implica acordul tau. 
+                    <a class="mx-2 text-white" href="https://www.fashiondays.ro/page/terms/#cookie-policy" target="_blank">Detalii.</a>
+                    <button type="button" class="btn btn-danger btn-sm rounded-lg text-uppercase">Sunt de acord</button>
+                </small>
+            </div>
+
+        </div>
+    
+    </div>
+    
+    <div id="social-container" class="d-flex flex-column border-color bg-light py-2">
+        <a class="social-button p-2" id="social-facebook" href="#share-facebook" rel="nofollow">
+            <i class="fab fa-facebook-f" style="font-size: 20px;color:gray"></i>
+        </a>
+        <a class="social-button p-2" id="social-pinterest" href="#share-pinterest" rel="nofollow">
+            <i class="fab fa-pinterest-p" style="font-size: 20px;color:gray"></i>
+        </a>
+        <a class="social-button p-2" id="social-twitter" href="#share-twitter" onclick="" rel="nofollow">
+            <i class="fab fa-twitter" style="font-size: 18px;color:gray"></i>
+        </a>
+    </div>
+        
+    <div class="container mt-3">
+
+        <div class="d-flex justify-content-around text-uppercase p-2 bg-gray">
+
+            <div class="row p-2">
+            
+                <div class="col-2">
+                    <i class="fas fa-truck" style="font-size:20px;color:gray"></i>
+                </div>
+            
+                <div class="col-10 text-capitalize">
+                    <small>LIVRARE GRATUITA PESTE 199 DE LEI*</small>
+                </div>
+            
+            </div>
+
+            <div class="row p-2">
+            
+                <div class="col-2">
+                    <i class="fas fa-box-open" style="font-size:20px;color:gray"></i>
+                </div>
+            
+                <div class="col-10 text-capitalize">
+                    <small>30 DE ZILE RETUR GRATUIT</small>
+                </div>
+            
+            </div>
+
+            <div class="row p-2">
+            
+                <div class="col-2">
+                    <i class="fas fa-retweet" style="font-size:20px;color:gray"></i>
+                </div>
+            
+                <div class="col-10 text-capitalize">
+                    <small>verificare la livrare</small>
+                </div>
+            
+            </div>
+
+        </div>
+
+        <div class="row mt-3">
+
+            <div class="col-md-3">
+
+               <h6 class="text-uppercase font-weight-bold mb-4">filtreaza dupa</h6>
+                
+               <hr>
+
+                <div class="">
+
+                    <h6 class="text-uppercase font-weight-bold">Categorii</h6>
+                    
+                    <small class="font-weight-bold just-first">incaltaminte</small>
+
+                    <div class="text-gray mt-1">
+
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label just-first" for="defaultCheck1">
+                                mocasini
+                            </label>
+                        </small>
+
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                            <label class="form-check-label just-first" for="defaultCheck2">
+                                pantofi
+                            </label>
+                        </small>
+                            
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                            <label class="form-check-label just-first" for="defaultCheck3">
+                                balerini
+                            </label>
+                        </small>
+                        
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                            <label class="form-check-label just-first" for="defaultCheck4">
+                                pantofi sport si tenesi
+                            </label>
+                        </small>
+
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                            <label class="form-check-label just-first" for="defaultCheck5">
+                                sandale
+                            </label>
+                        </small>
+
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+                            <label class="form-check-label just-first" for="defaultCheck6">
+                                botine si ghete
+                            </label>
+                        </small>
+
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+                            <label class="form-check-label just-first" for="defaultCheck7">
+                                papuci
+                            </label>
+                        </small>
+
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+                            <label class="form-check-label just-first" for="defaultCheck8">
+                                cizme
+                            </label>
+                        </small>
+
+                    </div>
+                  
+                </div>
+
+                <div class="pt-4">
+                
+                    <h6 class="text-uppercase font-weight-bold">Branduri</h6>
+                    
+                    <div class="text-gray just-first filter">
+
+                        <small class="form-check text-capitalize">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
+                            <label class="form-check-label" for="defaultCheck9">
+                                <span class="text-lowercase">adidas</span> 
+                                <span class="just-first">performance</span>
+                            </label>
+                        </small>
+                    
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
+                            <label class="form-check-label just-first" for="defaultCheck10">
+                                aldo
+                            </label>
+                        </small>
+                    
+                        <small class="form-check text-uppercase">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck11">
+                            <label class="form-check-label" for="defaultCheck11">
+                                armani exchange
+                            </label>
+                        </small>
+                    
+                        <small class="form-check text-uppercase">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck12">
+                            <label class="form-check-label" for="defaultCheck12">
+                                ash
+                            </label>
+                        </small>
+                    
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck13">
+                            <label class="form-check-label just-first" for="defaultCheck13">
+                                asics
+                            </label>
+                        </small>
+                    
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck14">
+                            <label class="form-check-label" for="defaultCheck14">
+                                <span class="text-uppercase">Asics</span>
+                                <span class="just-first">tiger</span>
+                            </label>
+                        </small>
+                    
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck15">
+                            <label class="form-check-label just-first" for="defaultCheck15">
+                                australian
+                            </label>
+                        </small>
+
+                        <small class="form-check text-uppercase">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck16">
+                            <label class="form-check-label" for="defaultCheck16">
+                                bearpaw
+                            </label>
+                        </small>
+
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck17">
+                            <label class="form-check-label just-first" for="defaultCheck17">
+                                bensimon
+                            </label>
+                        </small>
+
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck18">
+                            <label class="form-check-label text-capitalize" for="defaultCheck18">
+                                bog star
+                            </label>
+                        </small>
+
+                            <small class="form-check text-uppercase">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1811">
+                                <label class="form-check-label" for="defaultCheck1811">
+                                    bearpaw
+                                </label>
+                            </small>
+                            
+                            <small class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1812">
+                                <label class="form-check-label just-first" for="defaultCheck1812">
+                                    bensimon
+                                </label>
+                            </small>
+                            
+                            <small class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1813">
+                                <label class="form-check-label text-capitalize" for="defaultCheck1813">
+                                    bog star
+                                </label>
+                            </small>
+                    
+                    </div>
+                    
+                </div>
+
+                <div class="pt-4">
+
+                    <h6 class="text-uppercase font-weight-bold">masuri</h6>
+
+                    <small class="font-weight-bold just-first">pantofi</small>
+                    
+                    <div class="text-gray mt-1 widget filter">
+
+                        <fieldset class="align-middle" >
+                            <label for="checkbox-1">35</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-1" id="checkbox-1">
+                            <label for="checkbox-2">35.5</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-2" id="checkbox-2">
+                            <label for="checkbox-3">36</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-3" id="checkbox-3">
+                            <label for="checkbox-4">36 2/3</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-4">
+                            <label for="checkbox-5">37</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-1" id="checkbox-5">
+                            <label for="checkbox-6">37 1/3</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-2" id="checkbox-6">
+                            <label for="checkbox-7">37.5</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-3" id="checkbox-7">
+                            <label for="checkbox-8">38</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-8">
+                            <label for="checkbox-9">38.5</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-1" id="checkbox-9">
+                            <label for="checkbox-10">38 1/2</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-2" id="checkbox-10">
+                            <label for="checkbox-11">38 2/3</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-3" id="checkbox-11">
+                            <label for="checkbox-12">38-WIDE</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-12">
+                            <label for="checkbox-13">39</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-1" id="checkbox-13">
+                            <label for="checkbox-14">39 1/3</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-2" id="checkbox-14">
+                            <label for="checkbox-15">39.5</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-3" id="checkbox-15">
+                            <label for="checkbox-16">40</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-16">
+                            <label for="checkbox-17">40.5</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-17">
+                            <label for="checkbox-18">41</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-1" id="checkbox-18">
+                            <label for="checkbox-19">41.5</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-3" id="checkbox-19">
+                            <label for="checkbox-20">42</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-20">
+                            <label for="checkbox-21">43</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-2" id="checkbox-21">
+                            <label for="checkbox-22">44</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-3" id="checkbox-22">
+                            <label for="checkbox-23">45</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-23">
+                            <label for="checkbox-231">38 2/3</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-3" id="checkbox-231">
+                            <label for="checkbox-232">38-WIDE</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-232">
+                            <label for="checkbox-233">39</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-1" id="checkbox-233">
+                            <label for="checkbox-234">39 1/3</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-2" id="checkbox-234">
+                            <label for="checkbox-235">39.5</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-3" id="checkbox-235">
+                            <label for="checkbox-236">40</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-236">
+                            <label for="checkbox-237">40.5</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-237">
+                            <label for="checkbox-238">41</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-1" id="checkbox-238">
+                            <label for="checkbox-239">41.5</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-3" id="checkbox-239">
+                            <label for="checkbox-240">42</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-240">
+                            <label for="checkbox-241">43</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-2" id="checkbox-241">
+                            <label for="checkbox-242">44</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-3" id="checkbox-242">
+                            <label for="checkbox-243">45</label>
+                            <input type="checkbox" class="checkbox-radio" name="checkbox-4" id="checkbox-243">
+                        </fieldset>
+                    
+                    </div>
+
+                </div>
+
+                <div class="py-4 clearfix">
+                
+                    <h6 class="text-uppercase font-weight-bold">culoare</h6>
+            
+                    <ol id="selectable">
+                        <li class="bg-bej ui-state-default"></li>
+                        <li class="bg-black ui-state-default"></li>
+                        <li class="bg-primary ui-state-default"></li>
+                        <li class="bg-bronz ui-state-default"></li>
+                        <li class="bg-brown ui-state-default"></li>
+                        <li class="bg-warning ui-state-default"></li>
+                        <li class="bg-success ui-state-default"></li>
+                        <li class="bg-secondary ui-state-default"></li>
+                        <li class="bg-rainbow ui-state-default"></li>
+                        <li class="bg-orange ui-state-default"></li>
+                        <li class="bg-pink ui-state-default"></li>
+                        <li class="bg-purple ui-state-default"></li>
+                        <li class="bg-danger ui-state-default"></li>
+                        <li class="bg-silver ui-state-default"></li>
+                        <li class="repeating-linear ui-state-default"></li>
+                        <li class="bg-snow ui-state-default"></li>
+                        <li class="bg-yellow ui-state-default"></li>
+                    </ol>
+                
+                </div>
+
+                <div class="just-first">
+                
+                    <h6 class="text-uppercase font-weight-bold">material</h6>
+                
+                    <div class="text-gray mt-1 filter">
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck000">
+                            <label class="form-check-label just-first" for="defaultCheck000">
+                                blana naturala
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck001">
+                            <label class="form-check-label just-first" for="defaultCheck001">
+                                bumbac
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck002">
+                            <label class="form-check-label just-first" for="defaultCheck002">
+                                panza
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck003">
+                            <label class="form-check-label just-first" for="defaultCheck003">
+                                catifea
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck004">
+                            <label class="form-check-label just-first" for="defaultCheck004">
+                                cauciuc
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck005">
+                            <label class="form-check-label just-first" for="defaultCheck005">
+                                piele peliculizata
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck006">
+                            <label class="form-check-label just-first" for="defaultCheck006">
+                                denim
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck007">
+                            <label class="form-check-label just-first" for="defaultCheck007">
+                                blana artificiala
+                            </label>
+                        </small>
+
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck009">
+                            <label class="form-check-label just-first" for="defaultCheck009">
+                                materiale speciale
+                            </label>
+                        </small>
+                        
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck010">
+                            <label class="form-check-label just-first" for="defaultCheck010">
+                                material sintetic
+                            </label>
+                        </small>
+
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck0010">
+                            <label class="form-check-label just-first" for="defaultCheck0010">
+                                blana artificiala
+                            </label>
+                        </small>
+                        
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck0011">
+                            <label class="form-check-label just-first" for="defaultCheck0011">
+                                materiale speciale
+                            </label>
+                        </small>
+                        
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck00012">
+                            <label class="form-check-label just-first" for="defaultCheck00012">
+                                material sintetic
+                            </label>
+                        </small>
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck0013">
+                            <label class="form-check-label just-first" for="defaultCheck0013">
+                                blana artificiala
+                            </label>
+                        </small>
+                        
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck0014">
+                            <label class="form-check-label just-first" for="defaultCheck0014">
+                                materiale speciale
+                            </label>
+                        </small>
+                        
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck0015">
+                            <label class="form-check-label just-first" for="defaultCheck0015">
+                                material sintetic
+                            </label>
+                        </small>
+
+                        
+                
+                    </div>
+                
+                </div>
+
+                <div class="just-first py-4">
+                
+                    <h6 class="text-uppercase font-weight-bold">stil</h6>
+                
+                    <div class="text-gray mt-1 filter">
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck111">
+                            <label class="form-check-label just-first" for="defaultCheck111">
+                                casual
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck112">
+                            <label class="form-check-label just-first" for="defaultCheck112">
+                                clasic
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck113">
+                            <label class="form-check-label just-first" for="defaultCheck113">
+                                de casa
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck114">
+                            <label class="form-check-label just-first" for="defaultCheck114">
+                                de plaja
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck115">
+                            <label class="form-check-label just-first" for="defaultCheck115">
+                                elegant
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck116">
+                            <label class="form-check-label just-first" for="defaultCheck116">
+                                pantofi inalti
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck117">
+                            <label class="form-check-label just-first" for="defaultCheck117">
+                                pantofi jos
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck118">
+                            <label class="form-check-label just-first" for="defaultCheck118">
+                                profil mediu
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck119">
+                            <label class="form-check-label just-first" for="defaultCheck119">
+                                office
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck120">
+                            <label class="form-check-label just-first" for="defaultCheck120">
+                                performanta
+                            </label>
+                        </small>
+
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1121">
+                            <label class="form-check-label just-first" for="defaultCheck1121">
+                                pantofi inalti
+                            </label>
+                        </small>
+                        
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1122">
+                            <label class="form-check-label just-first" for="defaultCheck1122">
+                                pantofi jos
+                            </label>
+                        </small>
+                        
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1123">
+                            <label class="form-check-label just-first" for="defaultCheck1123">
+                                profil mediu
+                            </label>
+                        </small>
+                        
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1124">
+                            <label class="form-check-label just-first" for="defaultCheck1124">
+                                office
+                            </label>
+                        </small>
+                        
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1125">
+                            <label class="form-check-label just-first" for="defaultCheck1125">
+                                performanta
+                            </label>
+                        </small>
+                
+                    </div>
+                
+                </div>
+
+                <div class="just-first">
+                
+                    <h6 class="text-uppercase font-weight-bold">inchidere</h6>
+                
+                    <div class="text-gray mt-1">
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck222">
+                            <label class="form-check-label just-first" for="defaultCheck222">
+                                capsa
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck223">
+                            <label class="form-check-label just-first" for="defaultCheck223">
+                                catarama
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck224">
+                            <label class="form-check-label just-first" for="defaultCheck224">
+                                fara inchidere
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck225">
+                            <label class="form-check-label just-first" for="defaultCheck225">
+                                sireturi
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck226">
+                            <label class="form-check-label just-first" for="defaultCheck226">
+                                snur
+                            </label>
+                        </small>
+                
+                        <small class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck226">
+                            <label class="form-check-label just-first" for="defaultCheck226">
+                                velcro
+                            </label>
+                        </small>
+                
+                    </div>
+                
+                </div>
+
+                <div class="py-4">
+
+                    <h6 class="text-uppercase font-weight-bold">pret</h6>
+                    
+                    <div class="d-flex justify-content-between">
+                        <div id="price-min">0</div>
+                        <div id="price-max">150</div>
+                    </div>
+                     
+                    <div id="slider-range" class="mt-2 slider"></div>
+                </div>
+    
+            </div>
+
+            <div class="col-md-9">
+
+                <h6 class="text-uppercase text-center font-weight-light">incaltaminte dama</h6>
+                
+                <div class="row">
+
+                    <div class="col-5 p-0">
+                        <hr>
+                    </div>
+
+                    <div class="col-2 text-center p-0">
+                        <small class="text-muted absolute">5651 produse</small>
+                    </div>
+
+                    <div class="col-5 p-0">
+                        <hr>
+                    </div>
+                    
+                </div>
+
+                <div class="d-flex justify-content-between">
+
+                    <div>
+                        FEMEI/
+                        <span class="text-muted">
+                            <small>Incaltaminte</small>
+                        </span>
+                    </div>
+
+                    <div class="pagination">
+                        <span style="font-size:20px;color:rgb(156, 154, 154)">&#9666;</span>
+                        <small class="font-weight-bold">
+                            <a class="active" href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">...</a>
+                            <a href="#">61</a>
+                        </small>   
+                          
+                        <span style="font-size:20px;">&#9656;</span>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="d-flex align-items-start">
+                        
+                        <small class="text-muted align-self-center mr-2">Sorteaza dupa</small>
+
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-sm btn-outline-secondary text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Popularitate
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <small>
+                                    <a class="dropdown-item dropdown-red" href="#">Popularitate</a>
+                                    <a class="dropdown-item dropdown-red" href="#">Cel mai mic pret</a>
+                                    <a class="dropdown-item dropdown-red" href="#">Cel mai mare pret</a>
+                                    <a class="dropdown-item dropdown-red" href="#">Cele mai noi</a>
+                                </small>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+
+                    <div class="col-4">
+                        <div class="card mb-2 position-relative">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29908/29907327/images/res_69b917a4f664bd10daab27e381580a5e.jpg?s=wmLB2O5LA2JD" class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left" title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1 " style="bottom: 0px;">New in</span>
+                        </div>
+
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">U.S. Polo Assn.</strong>
+                                <a href="#" class="text-danger font-weight-bold">184<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport din piele ecologica
+                                cu detaliu logo Franco</small>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932583/images/res_f35a7a9ef6d0e9694355f6eadfa31b83.jpg?s=TWDfldZVF-IB"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left" title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New in</span>
+                        </div>
+
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7</strong>
+                                <a href="#" class="text-danger font-weight-bold">999<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex de piele si piele ecologica, cu logo</small>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932544/images/res_86d09557458e3e73f42a114dd9aff0b3.jpg?s=y36i8VEC-eVa"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left" title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New in</span>
+                        </div>
+                        
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7.</strong>
+                                <a href="#" class="text-danger font-weight-bold">1.119<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex cu insertii de plasa si piele
+                                ecologica</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row mt-4">
+                
+                    <div class="col-4">
+                        <div class="card mb-2 position-relative">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29908/29907327/images/res_69b917a4f664bd10daab27e381580a5e.jpg?s=wmLB2O5LA2JD"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1 " style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">U.S. Polo Assn.</strong>
+                                <a href="#" class="text-danger font-weight-bold">184<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport din piele ecologica
+                                cu detaliu logo Franco</small>
+                        </div>
+                    </div>
+                
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932583/images/res_f35a7a9ef6d0e9694355f6eadfa31b83.jpg?s=TWDfldZVF-IB"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7</strong>
+                                <a href="#" class="text-danger font-weight-bold">999<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex de piele si piele
+                                ecologica, cu logo</small>
+                        </div>
+                    </div>
+                
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932544/images/res_86d09557458e3e73f42a114dd9aff0b3.jpg?s=y36i8VEC-eVa"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7.</strong>
+                                <a href="#" class="text-danger font-weight-bold">1.119<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex cu insertii de plasa si
+                                piele
+                                ecologica</small>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="row mt-4">
+                
+                    <div class="col-4">
+                        <div class="card mb-2 position-relative">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29908/29907327/images/res_69b917a4f664bd10daab27e381580a5e.jpg?s=wmLB2O5LA2JD"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1 " style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">U.S. Polo Assn.</strong>
+                                <a href="#" class="text-danger font-weight-bold">184<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport din piele ecologica
+                                cu detaliu logo Franco</small>
+                        </div>
+                    </div>
+                
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932583/images/res_f35a7a9ef6d0e9694355f6eadfa31b83.jpg?s=TWDfldZVF-IB"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7</strong>
+                                <a href="#" class="text-danger font-weight-bold">999<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex de piele si piele
+                                ecologica, cu logo</small>
+                        </div>
+                    </div>
+                
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932544/images/res_86d09557458e3e73f42a114dd9aff0b3.jpg?s=y36i8VEC-eVa"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7.</strong>
+                                <a href="#" class="text-danger font-weight-bold">1.119<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex cu insertii de plasa si
+                                piele
+                                ecologica</small>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="row mt-4">
+                
+                    <div class="col-4">
+                        <div class="card mb-2 position-relative">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29908/29907327/images/res_69b917a4f664bd10daab27e381580a5e.jpg?s=wmLB2O5LA2JD"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1 " style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">U.S. Polo Assn.</strong>
+                                <a href="#" class="text-danger font-weight-bold">184<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport din piele ecologica
+                                cu detaliu logo Franco</small>
+                        </div>
+                    </div>
+                
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932583/images/res_f35a7a9ef6d0e9694355f6eadfa31b83.jpg?s=TWDfldZVF-IB"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7</strong>
+                                <a href="#" class="text-danger font-weight-bold">999<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex de piele si piele
+                                ecologica, cu logo</small>
+                        </div>
+                    </div>
+                
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932544/images/res_86d09557458e3e73f42a114dd9aff0b3.jpg?s=y36i8VEC-eVa"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7.</strong>
+                                <a href="#" class="text-danger font-weight-bold">1.119<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex cu insertii de plasa si
+                                piele
+                                ecologica</small>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="row mt-4">
+                
+                    <div class="col-4">
+                        <div class="card mb-2 position-relative">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29908/29907327/images/res_69b917a4f664bd10daab27e381580a5e.jpg?s=wmLB2O5LA2JD"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1 " style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">U.S. Polo Assn.</strong>
+                                <a href="#" class="text-danger font-weight-bold">184<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport din piele ecologica
+                                cu detaliu logo Franco</small>
+                        </div>
+                    </div>
+                
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932583/images/res_f35a7a9ef6d0e9694355f6eadfa31b83.jpg?s=TWDfldZVF-IB"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7</strong>
+                                <a href="#" class="text-danger font-weight-bold">999<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex de piele si piele
+                                ecologica, cu logo</small>
+                        </div>
+                    </div>
+                
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932544/images/res_86d09557458e3e73f42a114dd9aff0b3.jpg?s=y36i8VEC-eVa"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7.</strong>
+                                <a href="#" class="text-danger font-weight-bold">1.119<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex cu insertii de plasa si
+                                piele
+                                ecologica</small>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="row mt-4">
+                
+                    <div class="col-4">
+                        <div class="card mb-2 position-relative">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29908/29907327/images/res_69b917a4f664bd10daab27e381580a5e.jpg?s=wmLB2O5LA2JD"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1 " style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">U.S. Polo Assn.</strong>
+                                <a href="#" class="text-danger font-weight-bold">184<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport din piele ecologica
+                                cu detaliu logo Franco</small>
+                        </div>
+                    </div>
+                
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932583/images/res_f35a7a9ef6d0e9694355f6eadfa31b83.jpg?s=TWDfldZVF-IB"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7</strong>
+                                <a href="#" class="text-danger font-weight-bold">999<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex de piele si piele
+                                ecologica, cu logo</small>
+                        </div>
+                    </div>
+                
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <img src="https://fdcdn.akamaized.net/m/310x450/products/29933/29932544/images/res_86d09557458e3e73f42a114dd9aff0b3.jpg?s=y36i8VEC-eVa"
+                                class="card-img-top" alt="incaltaminte">
+                            <i class="fab fa-creative-commons-share text-block" data-toggle="tooltip" data-placement="left"
+                                title="Click pentru a vedea produse similare"></i>
+                            <span class="new-in text-uppercase text-center position-absolute w-100 p-1" style="bottom: 0px;">New
+                                in</span>
+                        </div>
+                
+                        <div class="card-body p-0">
+                            <small class="d-flex justify-content-between">
+                                <strong class="card-title">EA7.</strong>
+                                <a href="#" class="text-danger font-weight-bold">1.119<sup>99</sup>RON</a>
+                            </small>
+                            <small class="card-text mt-0 w-75 d-inline-block text-truncate">Pantofi sport unisex cu insertii de plasa si
+                                piele
+                                ecologica</small>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="pagination mt-2 pb-3 d-flex justify-content-end">
+                    <span style="font-size:20px;color:rgb(156, 154, 154)">&#9666;</span>
+                    <small class="font-weight-bold">
+                        <a class="active" href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">...</a>
+                        <a href="#">61</a>
+                    </small>
+                    <span style="font-size:20px;">&#9656;</span>
+                </div>
+
+                <hr>
+                <div class="py-4">
+
+                    <h5 class="font-weight-bold">Incaltaminte de dama confortabila si eleganta pentru tinutele tale de zi cu zi</h5>
+
+                    <small class="p-1">
+                        <p>Iubesti pantofii pentru ca ii poti colectiona. Si pentru ca sunt sexi. Iti pot schimba total tinuta. Iubesti 
+                            <em>
+                                <strong> 
+                                    <a  class="text-danger" href="https://www.fashiondays.ro/g/femei-/incaltaminte-pantofi">pantofii de dama</a>
+                                </strong>
+                            </em>pantofii de dama pentru ca pur si simplu nu ai cum sa te plictisesti de ei. Iubesti pantofii pentru ca adauga exact doza de indrazneala de care ai nevoie. In fiecare zi.</p>
+                    </small>
+
+                    <h6 class="font-weight-bold">Incaltaminte pentru intregul an indiferent de sezon</h6>
+
+                    <small>
+                        <p class="p-1">Cand spunem petrecere si vara, nu putem sa nu ne gandim la o noua pereche de sandale. Stilul primeaza dar confortul este
+                        esential! Vei gasi nenumarate optiuni de sandale cu toc mediu si mic, block sau rotund, ideale pentru casual Friday sau
+                        o zi petrecuta cu cei dragi, dar si sandale cu toc stiletto, cu care vei face impresie la orice petrecere.</p>
+
+                        <p class="p-1">Exista trei lucruri de care nu ne vom satura niciodata: pantofi, pantofi si iarasi pantofi! Indiferent ca preferi
+                        pantofi cu varf ascutit, migdalat sau rotund, modelele cu toc inalt, kitten sau toc mediu gros, cu platfoma sau varf
+                        decupat sau slingback, vei gasi aici noul tau model preferat.</p>
+
+                        <p class="p-1">Dar totusi nimic nu este la fel de confortabil si cool ca o pereche de cizme sau ghete. Stilul nostru favorit de cizme
+                        pentru toamna/iarna are o talpa confortabila si interior ce te va proteja de temperaturile scazute si zapada in toate
+                        formele ei.</p>
+
+                        <p class="p-1">Cauti o noua pereche de cizme sau ghete? Iti oferim nenumarate optiuni, de la design casual pentru fiecare zi la modele
+                        uluitoare, perfecte pentru a arata super stylish in sezonul rece.</p>
+
+                        <p class="p-1">Singurul regret dupa o sesiune de shopping? Atat de multi pantofi si atat de putin timp sa ii porti…
+                        La Fashion Days gasesti o diversitate de incaltaminte moderna pentru femei indiferent de stilul dorit. Daca stilul
+                        casual te caracterizeaza, te asteptam cu o multitudine de modele de incaltaminte casual de la branduri mari precum Nike,
+                        Puma sau Adidas din care iti vei putea alege pantofii potriviti tie.</p>
+            
+                        <p class="p-1">In cazul in care esti o persoana mai comoda si doresti o pereche de incaltaminte pe care sa o incalti foarte usor,
+                        pantofii si ghete fara sistem de inchidere reprezinta varianta ideala de incaltaminte pentru tine. Pe Fashion Days
+                        gasesti astfel de incaltaminte atat sport, cat si casual sau office. In sezonul cald, pantofii sport sunt foarte
+                        potriviti pentru tinutele sport iar in cazul in care esti adepta stilului office sau elegant, pantofii stiletto sau
+                        botinele cu toc te pot ajuta sa ai o tinuta asa cum iti doresti.</p>
+
+                        <p class="p-1">Botinele cu varful ascutit de culori negru sau maro deschis pot reprezenta piesa de rezistenta a multor tinute feminine
+                        cu care sa atragi privirile oricui. Pantofii Stiletto ii poti purta in special in sezonul cald la foarte multe tinute
+                        atat de serviciu cat si la diverse ocazii speciale.</p>
+
+                        <p class="p-1">Pentru a putea sa le asortezi la multe tinute, poti opta pentru culorile neutre precum alb, negru sau gri pe care le
+                        poti combina cu alte piese vestimentare. Asa nu vei fi nevoita sa cumperi multe perechi de incaltaminte si iti vei putea
+                        permite sa achizitionezi alte articole vestimentare care te vor ajuta sa iti construiesti garderopa mult dorita
+                        indiferent de ocazie sau anotimp.</p>
+                    </small>
+                
+                </div>
+
+                <hr class="pb-5">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div>
+        <a class="bg-dark"  href="#top" id="to-top">
+            <i class="fas fa-chevron-up p-3" style="font-size: 18px;color: gray;"></i>
+        </a>
+    </div>
+
+    <div>
+        <a class="bg-gray px-2 py-3 border border-secondary" href="#top" id="open-viewed-products">
+            <i class="far fa-eye" style="font-size: 18px;color: gray;"></i>
+        </a>
+    </div>
+
+    <div class="border border-secondary bg-gray pt-5" style="height: 280px">
+    
+        <div class="container d-flex align-items-start">
+            <h5 class="text-uppercase my-2">PRODUSE VIZUALIZATE RECENT</h5>                  
+
+
+            <div class="custom-control custom-switch mx-4">
+                <input type="checkbox" checked="checked" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1"></label>
+            </div>
+    
+        </div>
+    
+        <p class="container font-weight-lighter">Nu ai vizualizat niciun produs. Poti cauta anumite produse cu ajutorul casutei de cautare din partea de
+            sus.</p>
+    
+    </div>
+
+
+    <div class="bg-black pt-5">
+
+        <div class="container">
+
+            <div class="row text-white border-bottom  border-secondary">
+
+                <div class="col-3 text-uppercase">
+                    <h4 class="font-weight-bold">Aboneaza-te</h4>
+                    <h5>la newsletter</h5>
+                </div>
+
+                <div class="col-5">
+                    <label for="exampleInputEmail1"></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Adresa de e-mail">
+
+                    <div class="form-check my-2">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <small>
+                            <label class="form-check-label" for="defaultCheck1">
+                                Confirm ca am peste 16 ani.
+                            </label>
+                        </small>
+                    </div>
+
+                    <div class="g-recaptcha" data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S" data-callback="verifyRecaptchaCallback"
+                        data-expired-callback="expiredRecaptchaCallback">
+                        <div style="width: 304px; height: 78px;">
+                            <div>
+                                <iframe
+                                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S&amp;co=aHR0cHM6Ly9ib290c3RyYXBpb3VzLmNvbTo0NDM.&amp;hl=en&amp;v=wk6lx42JIeYmEAQSHndnyT8Q&amp;size=normal&amp;cb=fzmv7viih8l9"
+                                    width="304" height="78" role="presentation" name="a-dxayqzyu52m3" frameborder="0" scrolling="no"
+                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox">
+                                </iframe>
+
+                            </div>
+                            <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
+                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;">
+                            </textarea>
+                        </div>
+                        <iframe style="display: none;"></iframe>
+                    </div>
+
+                    <div class="mt-2 pb-5">
+                        <button type="button" class="btn btn-danger  text-uppercase">oferte pentru femei</button>
+                        <button type="button" class="btn btn-danger  text-uppercase">oferte pentru barbati</button>
+                    </div>
+                    
+                </div>
+
+                <div class="col-4">
+                    <p class="text-uppercase text-center" style="font-size: 14px;">FII MEREU LA CURENT CU NOUTATI DESPRE BRANDURILE NOASTRE, REDUCERI EXCLUSIVE SI ULTIMELE TRENDURI IN MODA!</p>
+                </div>
+
+            </div>
+
+            <div class="row text-secondary border-bottom  border-secondary py-4">
+
+                <div class="col-3">
+                    
+                    <small class="text-uppercase font-weight-bold">Suport si asistenta</small>
+
+                    <small>
+                        <ul class="p-0 mt-2" style="list-style-type:none;">
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/page/faq/">Intrebari frecvente</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/page/return-information/" class="selected">Informatii
+                                    retur</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/page/terms/#cookie-policy">Informatii despre
+                                    cookies</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/page/terms/">Termeni si Conditii</a>
+                            </li>
+                            <li><a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/company/">Despre noi</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/company/contact-us/" target="_blank">Contact</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/page/warranty/">Garantie</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="http://www.anpc.gov.ro/" rel="nofollow" target="_blank">ANPC</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/page/terms/#privacy-policy">Politica de
+                                    confidentialitate</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/page/terms/withdraw/">Retragere</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/page/payment-methods/">Modalitati de plata</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="https://profitshare.ro/advertiseri/fashiondays" rel="nofollow"
+                                    target="_blank">Program de Afiliere Profitshare</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none"
+                                    href="https://api.2performant.com/public/affiliates/recruit_affiliate?unique_code=a1880c1fe" rel="nofollow"
+                                    target="_blank">Program de Afiliere 2Performant</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/guide/black-friday">Black Friday Fashion Days</a>
+                            </li>
+                        </ul>
+                    </small>
+                       
+
+                </div>
+
+                <div class="col-3">
+                
+                    <small class="text-uppercase font-weight-bold">RELATII CLIENTI</small>
+                
+                    <small>
+                        <ul class="p-0 mt-2" style="list-style-type:none;">
+                            <li>
+                                <strong class="text-secondary">0215 699 123 / 0212 004 250</strong>  
+                            </li>
+                            <li>
+                                Luni – Vineri: 07:30 - 23:00 Sambata: 08:00 - 18.00 Duminica: 09:00 - 17:00
+                            </li>
+                            <li class="mt-3">
+                                <a class="text-secondary text-decoration-none" href="https://www.fashiondays.ro/page/send-us-a-message/">Trimiteti-ne un mesaj </a>
+                            </li>
+                        </ul>
+                    </small>
+                
+                </div>
+
+                <div class="col-3">
+                
+                    <small class="text-uppercase font-weight-bold">Aplicatii pentru mobil</small>
+                
+                    <small>
+                        <ul class="p-0 mt-2" style="list-style-type:none;">
+                            <li>
+                                <a class="text-secondary" href="https://apps.fashiondays.ro/" rel="nofollow">iPhone</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary" href="https://apps.fashiondays.ro/" rel="nofollow">iPad</a>
+                            </li>
+                            <li>
+                                <a class="text-secondary" href="https://apps.fashiondays.ro/" rel="nofollow">Android</a>
+                            </li>
+                        </ul>
+                    </small>
+                
+                </div>
+
+                <div class="col-3">
+                
+                    <small class="text-uppercase">Social media</small>
+                
+                    <div class="d-flex justify-content-start mt-2">
+                     
+                        <div class="mr-2">
+                            <a class="facebook" target="_blank" href="https://www.facebook.com/fashiondays.romania">
+                                <i class="fab fa-facebook-square" style="font-size: 35px;color:white;"></i>
+                            </a>   
+                        </div>
+                        <div>
+                            <a class="twitter" target="_blank" href="https://twitter.com/fashiondays">
+                                <i class="fab fa-twitter-square" style="font-size: 35px;color:white;"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="googleplus" target="_blank" href="https://plus.google.com/u/1/b/111553768127498717326/">
+                                <i class="" style="font-size: 35px;color:white;"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-start mt-2">
+                        <div class="mr-2">
+                            <a class="pinterest" target="_blank" href="https://www.pinterest.com/FashionDaysRO/">
+                                <i class="fab fa-pinterest-square" style="font-size: 35px;color:white;"></i>
+                            </a>
+                        </div>
+                        <div class="mr-2">
+                            <a class="youtube" target="_blank" href="https://www.youtube.com/user/FashionDaysRO">
+                                <i class="fab fa-youtube-square" style="font-size: 35px;color:white;"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="instagram" target="_blank" href="https://instagram.com/fashiondays">
+                                <i class="fab fa-instagram-square" style="font-size: 35px;color:white;"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                
+                </div>
+               
+            </div>
+
+            <div class="text-secondary border-bottom border-secondary py-4">
+
+                <div class="w-50 d-flex justify-content-start">
+                    
+                    <div style="margin-right:140px;"> 
+                        <small class="text-uppercase font-weight-bold">metoda de plata</small>
+
+                        <div class="d-flex justify-content-start mt-2">
+                        
+                            <div class="p-1">
+                                <a class="facebook" target="_blank" href="https://www.facebook.com/fashiondays.romania">
+                                    <i class="fab fa-cc-mastercard" style="font-size: 53px;color:white;"></i>
+                                </a>
+                            </div>
+                            <div class="p-1">
+                                <a class="twitter" target="_blank" href="https://twitter.com/fashiondays">
+                                    <i class="fab fa-cc-mastercard" style="font-size: 53px;color:white;"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-start">
+                            <div class="p-1">
+                                <a class="googleplus" target="_blank" href="https://plus.google.com/u/1/b/111553768127498717326/">
+                                    <i class="fab fa-cc-visa" style="font-size: 53px;color:white;"></i>
+                                </a>
+                            </div>
+                            <div class="p-1">
+                                <a class="googleplus" target="_blank" href="https://plus.google.com/u/1/b/111553768127498717326/">
+                                    <i class="fab fa-cc-visa" style="font-size: 53px;color:white;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <small class="text-uppercase font-weight-bold">optiuni de vanzare</small>
+                        
+                        <div class="d-flex justify-content-start mt-2">
+                        
+                            <div class="p-1">
+                                <a class="facebook" target="_blank" href="https://www.facebook.com/fashiondays.romania">
+                                    <i class="fab fa-cc-mastercard" style="font-size: 53px;color:white;"></i>
+                                </a>
+                            </div>
+                            <div class="p-1">
+                                <a class="twitter" target="_blank" href="https://twitter.com/fashiondays">
+                                    <i class="fab fa-cc-mastercard" style="font-size: 53px;color:white;"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-start">
+                            <div class="p-1">
+                                <a class="googleplus" target="_blank" href="https://plus.google.com/u/1/b/111553768127498717326/">
+                                    <i class="fab fa-cc-visa" style="font-size: 53px;color:white;"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                        
+
+
+
+
+
+                   
+               
+
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-start text-uppercase text-secondary border-bottom  border-secondary py-5">
+            
+                <div class="row" style="margin-right: 80px;">
+            
+                    <div class="col-2">
+                        <i class="fas fa-truck" style="font-size:30px;color:gray" aria-hidden="true"></i>
+                    </div>
+            
+                    <div class="col-10 text-uppercase">
+                        <small>LIVRARE GRATUITA PESTE 199 DE LEI*</small>
+                    </div>
+            
+                </div>
+            
+                <div class="row border-left  border-secondary" style="margin-right: 80px;">
+            
+                    <div class="col-2">
+                        <i class="fas fa-box-open" style="font-size:30px;color:gray" aria-hidden="true"></i>
+                    </div>
+            
+                    <div class="col-10 text-uppercase">
+                        <small>RETUR GRATUIT in 30 de zile</small>
+                    </div>
+            
+                </div>
+            
+                <div class="row border-left  border-secondary">
+            
+                    <div class="col-2">
+                        <i class="fas fa-tag" style="font-size:30px;color:gray" aria-hidden="true"></i>
+                    </div>
+            
+                    <div class="col-10 text-uppercase">
+                        <small>produse noi in fiecare zi</small>
+                    </div>
+            
+                </div>
+            
+            </div>
+
+            <div class="align-self-center text-secondary py-5">
+                <small>&nbsp;&nbsp;© 2001 - 2020 Dante International, CUI: 14399840, Reg. Com. J40/372/2002</small>
+            </div>
+        
+        </div>
+    
+    </div>
+
+    <div>
+        <div class="container d-flex justify-content-start py-4">
+            <a class="mr-4" href="https://itunes.apple.com/ro/app/fashion-days/id614384628?mt=8&amp;uo=4" rel="nofollow"><img
+                src="https://fdcdn.akamaized.net/b/d3Q-135x40.png"
+                alt="Aplicatia mobila Fashion Days - Disponibila in AppStore"></a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.fashiondays.android" rel="nofollow"><img
+                src="https://fdcdn.akamaized.net/b/d3R-134x40.png"
+                alt="Aplicatia mobila Fashion Days - Disponibila in Google Play"></a>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(function () {
+            $("input.checkbox-radio").checkboxradio({
+                icon: false
+            });
+        });
+
+        $(function () {
+            $("#selectable").selectable();
+        });
+
+        $(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 1500,
+                values: [0, 1500],
+                slide: function (event, ui) {
+                    $("#price-min").html(ui.values[0]);
+                    $("#price-max").html(ui.values[1]);
+                }
+            });
+        });
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+    
+    </script>
+</body>
+
+</html>
