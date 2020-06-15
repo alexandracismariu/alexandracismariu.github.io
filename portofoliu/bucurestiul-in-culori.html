@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Tailwind CSS first, then fontawesome -->
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <title>Bucureștiul în culori</title>
+
+    <style>
+
+        .small-tab {
+            text-indent: 25px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .letter-style::first-letter {
+                font-size: 70px;
+                float: left;
+                margin-top: -32px;
+                color: gray;
+            }
+
+            .small-tab {
+                text-indent: 0px;
+            }
+        }    
+
+        .text-tab {
+            text-indent: 35px;
+        }
+
+        .h-1\/2-vh {
+            height: 50vh;
+            width: 100vw;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+      
+    </style>
+
+</head>
+
+<body>
+
+    <h1 class="text-2xl md:text-4xl text-center font-bold pt-8">Bucureștiul în culori</h1>
+
+    <p class="text-md w-4/5 md:w-3/5 mx-auto letter-style py-8 small-tab">Bucureștiul, asemenea multor orașe din România, este văzut ca un oraș predominant gri și mohorât. De aceea, am hotărât să-l colorăm noi în viile culori ale curcubeului.</p>
+
+    <div id="map" class="mx-auto h-1/2-vh"></div>
+
+    <div class="mx-auto w-4/5 md:w-3/5 py-10">
+
+        <h1 class="text-xl md:text-3xl underline">Profil virtual</h1>
+    
+        <div class="flex flex-col md:flex-row mt-6 items-center">
+    
+            <div class="w-full md:w-3/5">
+                <img class="h-auto w-auto"
+                    src="https://scontent.fotp3-3.fna.fbcdn.net/v/t31.0-8/13698276_1009607802470532_3382112855404735997_o.jpg?_nc_cat=103&_nc_sid=174925&_nc_ohc=oh1vrGg7668AX9asnnL&_nc_ht=scontent.fotp3-3.fna&oh=1ab960a884de260d92c8c5c502aea9bf&oe=5F0A9C8F"
+                    alt="avatar">
+            </div>
+    
+            <div class="w-full md:w-2/5 text-center md:text-left flex items-center">
+                <div class="inline-block md:ml-12">
+                    <h1 class="text-4xl lg:text-6xl text-black">Alexandra</h1>
+                    <h2 class="text-4xl lg:text-6xl uppercase text-red-600 border-b border-black">Cismariu</h2>
+                       
+                        <div class="flex justify-start mt-4">
+                            <div class="w-10 flex-shrink-0">
+                                <i class="fas fa-child" style="font-size:30px;color:red"></i>
+                            </div>
+                        
+                            <div class="w-full break-all flex items-center">
+                                <span class="break-words">27 de ani</span>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-start mt-4">
+                            <div class="w-10 flex-shrink-0">
+                                <i class="fas fa-paper-plane" style="font-size:28px;color:red"></i>
+                            </div>
+                        
+                            <div class="w-full break-all flex items-center">
+                                <span class="break-words">alexandra.g.cismariu@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-start mt-4">
+                            <div class="w-10 flex-shrink-0">
+                                <i class="fas fa-phone-volume" style="font-size:30px;color:red"></i>
+                            </div>
+                        
+                            <div class="w-full flex self-center">
+                                <span>0756 042 413</span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    
+        </div>
+
+        <div class="py-5">
+            <div class="text-justify leading-6 w-auto pt-4">
+                <p class="text-tab">Având o formare de inginer am devenit foarte pasionată de
+                    dezvoltarea web și sunt într-o continuă căutare de a-mi <b>dezvolta abilitățile</b> 
+                    pentru a construi platforme online complexe și atrăgătoare.</p>
+                <p class="text-tab">În prezent caut o echipă dinamică din care să fac parte pentru a
+                    crește și a-mi <b>îmbunătăți cunoștințele actuale.</b>
+                    Totodată, îmi doresc ca această echipă să fie dispusă să mă primească ca <b>dezvoltator web junior</b> 
+                    și să mă ajute să evoluez în acest domeniu fascinant.</p>
+
+                <p class="text-tab">Sunt atentă la detalii și concentrată pe găsirea de soluții eficiente și pe
+                    furnizarea de calitate și rezultate în timp util.
+                    Caut în continuu să-mi îmbunătățesc abilitățile, atât în ​​viața personală, cât și cea profesională.
+                    Sunt o persoană dinamică, iubesc sporturile extreme și natura. De asemenea, îmi place să fiu punctuală, implicată,
+                    o persoană pe care te poți baza.
+                <p class="text-tab">Consider că este foarte important să pui o doză de entuziasm în tot ceea ce faci. Astfel, încerc să manifest bucurie în efectuarea oricărei sarcini, dând tot ce e mai bun din mine.</p>
+            </div>
+        </div>
+    
+    </div>
+
+    <script>
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 11,
+                center: { lat: 44.440000, lng: 26.115627 },  
+                mapTypeId: 'roadmap'
+            });
+
+            // Define the LatLng coordinates for the District 1.
+            var d1Coords = [
+                { lat: 44.539412, lng: 26.104206 },
+                { lat: 44.513367, lng: 26.009910 },
+                { lat: 44.500030, lng: 26.007165 },
+                { lat: 44.491652, lng: 25.987717 },
+                { lat: 44.470275, lng: 25.979845 },
+                { lat: 44.478273, lng: 25.989657 },
+                { lat: 44.479522, lng: 26.000660 },
+                { lat: 44.457333, lng: 26.055700 },
+                { lat: 44.435010, lng: 26.075006 },
+                { lat: 44.436034, lng: 26.102626 },
+                { lat: 44.471732, lng: 26.105835 },
+                { lat: 44.480905, lng: 26.101765 },
+                { lat: 44.486168, lng: 26.102691 },
+                { lat: 44.487255, lng: 26.114943 },
+                { lat: 44.505121, lng: 26.104207 },
+                { lat: 44.539412, lng: 26.104206 }
+            ];
+
+            // Construct the polygon.
+            var districtOne = new google.maps.Polygon({
+                paths: d1Coords,
+                strokeColor: '#ff0000',
+                strokeOpacity: 1,
+                strokeWeight: 2,
+                fillColor: '#ff0000',
+                fillOpacity: 0.5
+            });
+
+             // Define the LatLng coordinates for District 2.
+            var d2Coords = [
+                { lat: 44.436034, lng: 26.102626 },
+                { lat: 44.471732, lng: 26.105835 },
+                { lat: 44.480905, lng: 26.101765 },
+                { lat: 44.486168, lng: 26.102691 },
+                { lat: 44.487255, lng: 26.114943 },
+                { lat: 44.479202, lng: 26.184836 },
+                { lat: 44.455908, lng: 26.156618 },
+                { lat: 44.449465, lng: 26.169331 },
+                { lat: 44.453473, lng: 26.175693 },
+                { lat: 44.452733, lng: 26.177319 },
+                { lat: 44.445535, lng: 26.173480 },
+                { lat: 44.443674, lng: 26.176970 },
+                { lat: 44.445593, lng: 26.181903 },
+                { lat: 44.442630, lng: 26.188626 },
+                { lat: 44.446148, lng: 26.193336 },
+                { lat: 44.442545, lng: 26.197368 },
+                { lat: 44.437191, lng: 26.183466 },
+                { lat: 44.435516, lng: 26.166655 },
+                { lat: 44.433356, lng: 26.114326 },
+                { lat: 44.433914, lng: 26.108162 },
+                { lat: 44.436034, lng: 26.102626 }
+            ];
+
+            // Construct the polygon.
+            var districtTwo = new google.maps.Polygon({
+                paths: d2Coords,
+                strokeColor: '#ffa500',
+                strokeOpacity: 1,
+                strokeWeight: 2,
+                fillColor: '#ffa500',
+                fillOpacity: 0.5
+            });
+
+               // Define the LatLng coordinates for District 3.
+            var d3Coords = [
+                { lat: 44.436034, lng: 26.102626 },
+                { lat: 44.433914, lng: 26.108162 },
+                { lat: 44.433356, lng: 26.114326 },
+                { lat: 44.435516, lng: 26.166655 },
+                { lat: 44.437191, lng: 26.183466 },
+                { lat: 44.442545, lng: 26.197368 },
+                { lat: 44.442008, lng: 26.197970 },
+                { lat: 44.439090, lng: 26.198224 },
+                { lat: 44.438845, lng: 26.204780 },
+                { lat: 44.433982, lng: 26.208012 },
+                { lat: 44.431258, lng: 26.218887 },
+                { lat: 44.432229, lng: 26.225614 },
+                { lat: 44.426530, lng: 26.222823 },
+                { lat: 44.426465, lng: 26.220963 },
+                { lat: 44.425493, lng: 26.220793 },
+                { lat: 44.424435, lng: 26.224271 },
+                { lat: 44.418187, lng: 26.221233 },
+                { lat: 44.418621, lng: 26.218374 },
+                { lat: 44.407297, lng: 26.217846 },
+                { lat: 44.405072, lng: 26.208320 },
+                { lat: 44.395107, lng: 26.211953 },
+                { lat: 44.393938, lng: 26.181811 },
+                { lat: 44.408914, lng: 26.122300 },
+                { lat: 44.425683, lng: 26.107050 },
+                { lat: 44.425716, lng: 26.102000 },
+                { lat: 44.430241, lng: 26.096240 },
+                { lat: 44.436034, lng: 26.102626 }
+            ];
+
+            // Construct the polygon.
+            var districtThree = new google.maps.Polygon({
+                paths: d3Coords,
+                strokeColor: '#ffff00',
+                strokeOpacity: 1,
+                strokeWeight: 2,
+                fillColor: '#ffff00',
+                fillOpacity: 0.5
+            });
+
+            // Define the LatLng coordinates for District 4.
+            var d4Coords = [   
+                { lat: 44.430241, lng: 26.096240 },
+                { lat: 44.425716, lng: 26.102000 },
+                { lat: 44.425683, lng: 26.107050 },
+                { lat: 44.408914, lng: 26.122300 }, 
+                { lat: 44.398413, lng: 26.162085 },
+                { lat: 44.369738, lng: 26.142455 },
+                { lat: 44.341775, lng: 26.164025 },
+                { lat: 44.339367, lng: 26.156131 },
+                { lat: 44.335700, lng: 26.156621 },
+                { lat: 44.334293, lng: 26.151789 }, 
+                { lat: 44.348400, lng: 26.127449 },
+                { lat: 44.351149, lng: 26.130407 },
+                { lat: 44.361373, lng: 26.109409 },
+                { lat: 44.358483, lng: 26.106550 },
+                { lat: 44.363136, lng: 26.098070 },
+                { lat: 44.360618, lng: 26.095643 },
+                { lat: 44.372128, lng: 26.087188 },
+                { lat: 44.381409, lng: 26.089702 },
+                { lat: 44.380670, lng: 26.085682 },
+                { lat: 44.383268, lng: 26.083552 },
+                { lat: 44.384633, lng: 26.085462 },
+                { lat: 44.381641, lng: 26.087849 },
+                { lat: 44.385078, lng: 26.091211 },
+                { lat: 44.399893, lng: 26.096388 },
+                { lat: 44.399483, lng: 26.092211 },
+                { lat: 44.403580, lng: 26.096552 },
+                { lat: 44.412181, lng: 26.090901 },
+                { lat: 44.418324, lng: 26.088525 }, 
+                { lat: 44.430241, lng: 26.096240 }
+            ];
+
+            // Construct the polygon.
+            var districtFour = new google.maps.Polygon({
+                paths: d4Coords,
+                strokeColor: '#008000',
+                strokeOpacity: 1,
+                strokeWeight: 2,
+                fillColor: '#008000',
+                fillOpacity: 0.5
+            });
+
+                // Define the LatLng coordinates for District 5.
+            var d5Coords = [
+                { lat: 44.436034, lng: 26.102626 },
+                { lat: 44.430241, lng: 26.096240 },
+                { lat: 44.418324, lng: 26.088525 },
+                { lat: 44.412181, lng: 26.090901 },
+                { lat: 44.403580, lng: 26.096552 }, 
+                { lat: 44.399483, lng: 26.092211 }, 
+                { lat: 44.399893, lng: 26.096388 }, 
+                { lat: 44.385078, lng: 26.091211 }, 
+                { lat: 44.381641, lng: 26.087849 }, 
+                { lat: 44.384633, lng: 26.085462 }, 
+                { lat: 44.383268, lng: 26.083552 }, 
+                { lat: 44.380670, lng: 26.085682 }, 
+                { lat: 44.381409, lng: 26.089702 }, 
+                { lat: 44.372128, lng: 26.087188 }, 
+                { lat: 44.368040, lng: 26.088405 },
+                { lat: 44.379359, lng: 26.056211 },
+                { lat: 44.376110, lng: 26.053972 },
+                { lat: 44.377649, lng: 26.047104 },
+                { lat: 44.374851, lng: 26.045799 },
+                { lat: 44.383059, lng: 26.033005 },
+                { lat: 44.387071, lng: 26.039139 },
+                { lat: 44.390709, lng: 26.034960 },
+                { lat: 44.388193, lng: 26.030526 },
+                { lat: 44.405744, lng: 26.010865 },
+                { lat: 44.401702, lng: 26.003082 },
+                { lat: 44.403498, lng: 26.001890 },
+                { lat: 44.402811, lng: 25.997326 },
+                { lat: 44.406681, lng: 25.996121 },
+                { lat: 44.408887, lng: 26.014102 },
+                { lat: 44.411843, lng: 26.018616 },
+                { lat: 44.413885, lng: 26.034342 },
+                { lat: 44.407659, lng: 26.029790 },
+                { lat: 44.406131, lng: 26.033724 },
+                { lat: 44.410103, lng: 26.036808 },
+                { lat: 44.407488, lng: 26.045533 },
+                { lat: 44.414632, lng: 26.052816 },
+                { lat: 44.420012, lng: 26.060224 },
+                { lat: 44.434474, lng: 26.059883 },
+                { lat: 44.439262, lng: 26.071160 },
+                { lat: 44.435010, lng: 26.075006 },
+                { lat: 44.436034, lng: 26.102626 },
+            ];
+
+            // Construct the polygon.
+            var districtFive = new google.maps.Polygon({
+                paths: d5Coords,
+                strokeColor: '#0000ff',
+                strokeOpacity: 1,
+                strokeWeight: 2,
+                fillColor: '#0000ff',
+                fillOpacity: 0.5
+            });
+
+            // Define the LatLng coordinates for District 6.
+            var d6Coords = [
+                { lat: 44.439262, lng: 26.071160 },
+                { lat: 44.434474, lng: 26.059883 }, 
+                { lat: 44.420012, lng: 26.060224 }, 
+                { lat: 44.414632, lng: 26.052816 }, 
+                { lat: 44.407488, lng: 26.045533 }, 
+                { lat: 44.410103, lng: 26.036808 }, 
+                { lat: 44.406131, lng: 26.033724 }, 
+                { lat: 44.407659, lng: 26.029790 }, 
+                { lat: 44.413885, lng: 26.034342 },
+                { lat: 44.411843, lng: 26.018616 }, 
+                { lat: 44.408887, lng: 26.014102 }, 
+                { lat: 44.406380, lng: 25.976105 },
+                { lat: 44.440792, lng: 25.966416 },
+                { lat: 44.443291, lng: 26.012312 },
+                { lat: 44.446430, lng: 26.020340 },
+                { lat: 44.449568, lng: 26.018046 },
+                { lat: 44.453894, lng: 26.012959 },
+                { lat: 44.455604, lng: 26.016057 },
+                { lat: 44.458500, lng: 26.012890 },
+                { lat: 44.467052, lng: 25.982162 },
+                { lat: 44.465531, lng: 25.976080 },
+                { lat: 44.466434, lng: 25.975937 },
+                { lat: 44.470275, lng: 25.979845 },
+                { lat: 44.478273, lng: 25.989657 },
+                { lat: 44.479522, lng: 26.000660 },
+                { lat: 44.457333, lng: 26.055700 },
+                { lat: 44.439262, lng: 26.071160 }
+            ];
+
+            // Construct the polygon.
+            var districtSix = new google.maps.Polygon({
+                paths: d6Coords,
+                strokeColor: '#4b0082',
+                strokeOpacity: 1,
+                strokeWeight: 2,
+                fillColor: '#4b0082',
+                fillOpacity: 0.5
+            });
+
+            districtOne.setMap(map);
+            districtTwo.setMap(map);
+            districtThree.setMap(map);
+            districtFour.setMap(map);
+            districtFive.setMap(map);
+            districtSix.setMap(map);
+        }
+
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZwptmkIf7CB7uO2_KE_oO-BJO9yMYzC8&callback=initMap">
+    </script>
+
+
+</body>
+
+</html>
