@@ -99,6 +99,26 @@
             cursor: pointer;
         }
 
+        .slider.ui-slider .ui-slider-handle {
+            border-radius: 50%;
+            background: white;
+            cursor: grab;
+            top: -.5em;
+        }
+        .slider.ui-slider .ui-slider-handle:hover {
+            box-shadow: 0px 0px 10px 0px rgb(238, 18, 18, 0.8);
+        }
+        .slider.ui-slider .ui-slider-range {
+            background: red;
+        }
+        .ui-slider-horizontal {
+            height: 4px;
+        }
+        .ui-widget.ui-widget-content {
+            border: none;
+            background: rgb(212, 208, 208);
+        }
+
         .ui-state-active, .ui-button.ui-state-active:hover, .ui-button:active {
             background-color: red;
             border: 1px solid red;
@@ -951,8 +971,8 @@
                     <h6 class="text-uppercase font-weight-bold">pret</h6>
                     
                     <div class="d-flex justify-content-between">
-                        <div id="price-min">0</div>
-                        <div id="price-max">150</div>
+                        <div id="price-min"></div>
+                        <div id="price-max"></div>
                     </div>
                      
                     <div id="slider-range" class="mt-2 slider"></div>
@@ -1878,6 +1898,9 @@
                     $("#price-max").html(ui.values[1]);
                 }
             });
+
+            $("#price-min").html($("#slider-range").slider("values", 0));
+            $("#price-max").html($("#slider-range").slider("values", 1));
         });
 
         $(function () {

@@ -22,6 +22,10 @@
 
     <style>
 
+        #bg-grad {
+            background-image: linear-gradient(rgb(236, 233, 34), rgb(240, 134, 12));
+        }
+
         .search-placeholder::placeholder {
             color: rgb(107, 105, 105);
             text-transform: uppercase;
@@ -100,6 +104,23 @@
             cursor: pointer;
         }
 
+        .slider.ui-slider .ui-slider-handle {
+            border-radius: 50%;
+            background: black;
+        }
+
+        .ui-slider-handle.ui-state-active { 
+            border-radius: 50% !important;
+            background: red !important;
+        }
+        .slider.ui-slider .ui-slider-handle:hover {
+            background: rgb(62, 129, 216);
+        }
+
+        .slider.ui-slider .ui-slider-range {
+            background: rgb(62, 129, 216);
+        }
+
         .checked-star {
             color: orange;
         }
@@ -113,7 +134,9 @@
             text-indent: 50px;
         }
 
-        
+        .bg-gray-opacity {
+            background-color: rgb(204, 204, 204, 0.7);
+        }
       
     </style>
 
@@ -121,7 +144,7 @@
 
 <body>
 
-    <div class="bg-yellow-400 text-center py-3">
+    <div id="top" class="bg-yellow-400 text-center py-3">
         <a class="text-black uppercase hover:underline" href="https://www.decathlon.ro/rezervari-online-ridicare-fara-contact.html">COMANDĂ ȘI
             RIDICĂ PRODUSELE DIN MAGAZIN. DETALII aICI</a>
     </div>
@@ -130,7 +153,7 @@
 
         <div class="flex inline-block w-5/12 px-8">
             <a class="self-center mr-8" href="https://www.decathlon.ro/">
-                <img class="w-40" src="/img/decathlon-logo.png" alt="logo-decathlon">
+                <img class="w-40" src="/portofoliu/img/decathlon-logo.png" alt="logo-decathlon">
             </a>
 
             <form class="w-full max-w-md">
@@ -182,47 +205,43 @@
     <div class="border border-gray-300 shadow">
         <div class="container mx-auto">
             <ul class="uppercase flex justify-around text-xs font-bold items-center tracking-tighter flex-grow">
-                <li class="py-5">sporturi</li>
-                <div class="border border-gray-300 h-8"></div>
+                <li class="py-2">sporturi</li>
+            
+                <li id="bg-grad" class="py-2 w-24 text-center">articole de plaja</li>
 
-                <li class="py-5">idei sportive</li>
-                <div class="border border-gray-300 h-8"></div>
-
-                <li class="py-5 text-center">1500 produse sub 50 de lei</li>
+                <li class="py-2 w-24 text-center">1500 produse sub 50 de lei</li>
                 <div class="border border-gray-300 h-8"></div>
                 
-                <li class="py-5">barbati</li>
+                <li class="py-2">barbati</li>
                 <div class="border border-gray-300 h-8"></div>
 
-                <li class="py-5">femei</li>
+                <li class="py-2">femei</li>
                 <div class="border border-gray-300 h-8"></div>
 
-                <li class="py-5">copii</li>
+                <li class="py-2">copii</li>
                 <div class="border border-gray-300 h-8"></div>
 
-                <li class="py-5">accesorii</li>
+                <li class="py-2">accesorii</li>
+
+                <li class="py-2 w-24 text-center text-white bg-red-700">final de colectie</li>
+
+                <li class="py-2">servicii</li>
                 <div class="border border-gray-300 h-8"></div>
 
-                <li class="py-5 text-center text-white bg-red-700">final de colectie</li>
-                <div class="border border-gray-300 h-8"></div>
-
-                <li class="py-5">servicii</li>
-                <div class="border border-gray-300 h-8"></div>
-
-                <li class="py-5 text-center">partenerul tau sportiv</li>
+                <li class="py-2 w-32 text-center -ml-4">partenerul tau sportiv</li>
             </ul>
         </div>
     </div>
 
-    <div class="flex justify-between w-full">
-        <div class="text-xs tracking-tighter mt-2 ml-3">Trekking la munte</div>
+    <div class="flex justify-between">
+        <div class="text-xs tracking-tighter mt-2 ml-3 w-full">Trekking la munte</div>
         
-        <div class="text-center font-bold italic tracking-tighter mt-8">
+        <div class="text-center font-bold italic tracking-tighter mt-8 w-full">
             <h1 class="text-2xl">TREKKING LA MUNTE</h1>
             <p class="text-sm text-blue-700">350 PRODUSE</p>
         </div>
 
-        <div class="flex items-center pr-4">
+        <div class="flex items-center pr-4 w-full justify-end">
             
             <h3 class="text-sm uppercase tracking-tighter font-bold pr-2 self-center">Ordonează după:</h3>
 
@@ -461,12 +480,9 @@
 
                 <div id="slider-range" class="w-8/12 ml-3 mb-3 slider"></div>
 
-                <div>
-                    <label for="amount"></label>
-                    <input type="text" id="amount" readonly style="color:gray;">
-
-                    <!-- <label for="amount2"></label>
-                    <input type="text" id="amount2" readonly style="color:gray;"> -->
+                <div  class="flex inline-block text-center text-xs text-gray-600">
+                    <div id="pret1" class="border border-gray-500 w-24 py-2 mr-8"></div>
+                    <div id="pret2" class="border border-gray-500 w-24 py-2"></div>
                 </div>
             </div>
 
@@ -632,7 +648,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -676,7 +692,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -720,7 +736,7 @@
                     </div>
                    
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -771,7 +787,7 @@
 
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
                 
                     <div class="flex justify-center">
@@ -822,7 +838,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -866,7 +882,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -910,7 +926,7 @@
                     </div>
                    
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -961,7 +977,7 @@
 
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
                 
                     <div class="flex justify-center">
@@ -1013,7 +1029,7 @@
                     </div>
             
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
             
                     <div class="flex justify-center">
@@ -1058,7 +1074,7 @@
                     </div>
             
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
             
                     <div class="flex justify-center">
@@ -1102,7 +1118,7 @@
                     </div>
             
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
             
                     <div class="flex justify-center">
@@ -1151,7 +1167,7 @@
             
             
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
             
                     <div class="flex justify-center">
@@ -1204,7 +1220,7 @@
                     </div>
             
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
             
                     <div class="flex justify-center">
@@ -1249,7 +1265,7 @@
                     </div>
             
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
             
                     <div class="flex justify-center">
@@ -1293,7 +1309,7 @@
                     </div>
             
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
             
                     <div class="flex justify-center">
@@ -1342,7 +1358,7 @@
             
             
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
             
                     <div class="flex justify-center">
@@ -1394,7 +1410,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -1438,7 +1454,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -1482,7 +1498,7 @@
                     </div>
                    
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -1533,7 +1549,7 @@
 
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
                 
                     <div class="flex justify-center">
@@ -1584,7 +1600,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -1628,7 +1644,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -1672,7 +1688,7 @@
                     </div>
                    
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -1723,7 +1739,7 @@
 
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
                 
                     <div class="flex justify-center">
@@ -1774,7 +1790,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -1818,7 +1834,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -1862,7 +1878,7 @@
                     </div>
                    
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -1913,7 +1929,7 @@
 
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
                 
                     <div class="flex justify-center">
@@ -1964,7 +1980,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -2008,7 +2024,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2052,7 +2068,7 @@
                     </div>
                    
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2103,7 +2119,7 @@
 
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2154,7 +2170,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -2198,7 +2214,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2242,7 +2258,7 @@
                     </div>
                    
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2293,7 +2309,7 @@
 
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2344,7 +2360,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -2388,7 +2404,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2432,7 +2448,7 @@
                     </div>
                    
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2483,7 +2499,7 @@
 
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2534,7 +2550,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -2578,7 +2594,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2622,7 +2638,7 @@
                     </div>
                    
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2673,7 +2689,7 @@
 
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2724,7 +2740,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -2768,7 +2784,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2812,7 +2828,7 @@
                     </div>
                    
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2863,7 +2879,7 @@
 
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
                 
                     <div class="flex justify-center">
@@ -2914,7 +2930,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -2958,7 +2974,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -3002,7 +3018,7 @@
                     </div>
                    
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-poncho.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-poncho.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -3053,7 +3069,7 @@
 
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-geaca.webp">
+                        <img class="h-full" src="/portofoliu/img/decathlon-geaca.webp">
                     </div>
                 
                     <div class="flex justify-center">
@@ -3104,7 +3120,7 @@
                     </div>
 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-guler.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-guler.jpg">
                     </div>
 
                     <div class="flex justify-center">
@@ -3148,7 +3164,7 @@
                     </div>
                 
                     <div class="flex justify-center h-64">
-                        <img class="h-full" src="/img/decathlon-pantaloni.jpg">
+                        <img class="h-full" src="/portofoliu/img/decathlon-pantaloni.jpg">
                     </div>
                 
                     <div class="flex justify-center">
@@ -3195,7 +3211,7 @@
         <p class="text-center font-bold italic">Decathlon - magazinul tău cu produse pentru peste 70 de sporturi, toate sub același acoperiș.</p>
     </div>
 
-    <div class="bg-gray-200 py-8">
+    <div class="bg-gray-200 pt-8">
 
         <div class="container mx-auto flex justyfiy-center border-b border-gray-400 pb-10">
 
@@ -3474,10 +3490,64 @@
                     </ul>
                 </div> -->
 
-            <div class="flex justify-around py-10">
+            <div class="border-b border-gray-400">
+              <div class="border-r border-gray-400 my-10 w-1/4">
+                    <h1 class="text-xs text-blue-700 uppercase font-bold mb-2">ne găsiți pe</h1>
+                    
+                    <div class="flex inline">
+                        <div class="mr-4">
+                            <a target="_blank" href="https://www.facebook.com/decathlon.ro">
+                                <i class="fab fa-facebook-f border-2 border-black rounded-full p-1 text-center"
+                                    style="font-size:20px; color:white; background-color:black; width:35px; height:36px;"></i>
+                            </a>
+                        </div>
+                        <div class="mr-4">
+                            <a target="_blank" href="https://www.youtube.com/user/DecathlonRomania?&ytbChannel=Decathlon%20Romania">
+                                <i class="fab fa-youtube border-2 border-black rounded-full p-1 text-center"
+                                    style="font-size:20px; color:white; background-color:black; width:35px; height:36px;"></i>
+                            </a>
+                        </div>
+                        <div class="">
+                            <a target="_blank" href="https://www.instagram.com/decathlonromania/">
+                                <i class="fab fa-instagram border-2 border-black rounded-full p-1 text-center"
+                                    style="font-size:20px; color:white; background-color:black; width:35px; height:36px;"></i>
+                            </a>
+                        </div>
+                    </div>
+              </div>
 
+            </div>
+
+            <div class="border-b border-gray-400 py-10">
+                <h1 class="text-xs text-blue-700 uppercase font-bold mb-4">modalități de plată</h1>
+            
+                <div class="flex inline pl-1">
+                    <div class="p-1">
+                        <a class="googleplus" target="_blank" href="https://plus.google.com/u/1/b/111553768127498717326/">
+                            <i class="fab fa-cc-visa" style="font-size: 35px;color:rgb(20, 165, 233);"></i>
+                        </a>
+                    </div>
+                    <div class="p-1">
+                        <a class="facebook" target="_blank" href="https://www.facebook.com/fashiondays.romania">
+                            <i class="fab fa-cc-mastercard" style="font-size: 35px;color:rgb(20, 165, 233);"></i>
+                        </a>
+                    </div>
+                    <div class="p-1">
+                        <a class="twitter" target="_blank" href="https://twitter.com/fashiondays">
+                            <i class="fab fa-cc-mastercard" style="font-size: 35px;color:rgb(20, 165, 233);"></i>
+                        </a>
+                    </div>
+                </div>
+            
+                <div class="flex inline">
+                    <img class="w-auto h-8"
+                        src="https://www.decathlon.ro/ecro/static/head-css/footer-gotocube/img/card-cadou-mare.png">
+                    <img class="w-auto h-8" src="https://www.decathlon.ro/ecro/static/head-css/footer-gotocube/img/e-cec-mare.png">
+                </div>
+            </div>
+
+            <div class="py-10">
                 <div class="flex items-start">
-
                     <div class="relative w-32 mr-10 flex self-center">
                         <div class="border border-gray-500 text-xs text-blue-700 uppercase font-bold bg-white py-1 px-2">
                             38 de tari și regiuni
@@ -3487,76 +3557,45 @@
                                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                         </div>
                     </div>
-
-                    <div>
-                        <h1 class="text-xs text-blue-700 uppercase font-bold mb-3">modalități de plată</h1>
-
-                        <div class="flex inline pl-2">
-                            <div class="p-1">
-                                <a class="googleplus" target="_blank" href="https://plus.google.com/u/1/b/111553768127498717326/">
-                                    <i class="fab fa-cc-visa" style="font-size: 35px;color:rgb(20, 165, 233);"></i>
-                                </a>
-                            </div>
-                            <div class="p-1">
-                                <a class="facebook" target="_blank" href="https://www.facebook.com/fashiondays.romania">
-                                    <i class="fab fa-cc-mastercard" style="font-size: 35px;color:rgb(20, 165, 233);"></i>
-                                </a>
-                            </div>
-                            <div class="p-1">
-                                <a class="twitter" target="_blank" href="https://twitter.com/fashiondays">
-                                    <i class="fab fa-cc-mastercard" style="font-size: 35px;color:rgb(20, 165, 233);"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="flex inline">
-                            <img class="w-auto h-8" src="https://www.decathlon.ro/ecro/static/head-css/footer-gotocube/img/card-cadou-mare.png">
-                            <img class="w-auto h-8" src="https://www.decathlon.ro/ecro/static/head-css/footer-gotocube/img/e-cec-mare.png">
-                        </div>
-
-                    </div>
                 </div>
-
-                <div class="border-r border-gray-300">
-                    <h1 class="text-xs text-blue-700 uppercase font-bold mb-3">ne găsiți pe</h1>
-                    
-                    <div class="flex inline">
-                        <div class="mr-4">
-                            <a target="_blank" href="https://www.facebook.com/decathlon.ro">
-                                <i class="fab fa-facebook-f border-2 border-black rounded-full p-1"
-                                    style="font-size:20px; color:white; background-color:black; width:35px; height:36px;"><i>
-                            </a>
-                        </div>
-                        <div class="mr-4">
-                            <a target="_blank" href="https://www.youtube.com/user/DecathlonRomania?&ytbChannel=Decathlon%20Romania">
-                                <i class="fab fa-youtube border-2 border-black rounded-full p-1" style="font-size:20px; color:white; background-color:black; width:35px; height:36px;"></i>
-                            </a>
-                        </div>
-                        <div>
-                            <a target="_blank" href="https://www.instagram.com/decathlonromania/">
-                                <i class="fab fa-instagram border-2 border-black rounded-full p-1" style="font-size:20px; color:white; background-color:black; width:35px; height:36px;"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                   
-                </div>
-
-
             </div>
+        </div>
 
+        <div class="container mx-auto py-20">
+            <div class="text-xs text-gray-700 text-right border-b border-gray-400 pb-6">
+                <a href="https://www.decathlon.ro/conditii-generale-vanzare.html">Termeni și condiții</a>
+                <span>-</span>
+                <a href="https://www.decathlon.ro/protectia-datelor.html">Protecția datelor personale</a>
+                <span>-</span>
+                <a href="https://www.decathlon.ro/prelucrarea-%C8%99i-protec%C5%A3i-datelor-personale-pentru-servicii-efectuate-%C3%AEn-magazin.html">Prelucrarea datelor personale pentru servicii în magazin</a>
+                <span>-</span><br>
+                <a href="https://www.decathlon.ro/intrebari-frecvente.html">F.A.Q</a>
+                <span>-</span>
+                <a href="https://www.decathlon.ro/rechemare-produse.html">Rechemare produse</a>
+            </div>
+        </div>
+
+        <div class="bg-blue-600 w-12 py-3 text-center text-white transform -skew-y-12 fixed bottom-0 right-0 z-50 mb-10 mr-8">
+            <a href="#top">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
+
+        <div class="w-full text-left text-xs bg-gray-opacity flex justify-between p-3 items-center fixed bottom-0 z-40">
+            <div class="tracking-tighter">
+                <span>Vizitând acest site, acceptați utilizarea cookie-urilor pentru a îmbunătăți calitatea vizitei dvs. și pentru
+                    a ne permite să vă oferim servicii și produse adaptate intereselor dvs, pe lângă opțiunile de partajare
+                    socială. Pentru a afla mai multe și pentru a configura setările, click </span>
+                <a class="underline text-blue-700" href="https://www.decathlon.ro/cookies.html" target="_blank">aici.</a>
+            </div>
+            <div class="mr-6">
+                <button class="border-none bg-blue-400 text-white px-2 py-1">Accept</button>
+            </div>
         </div>
        
     </div>
-
+     
     
-
-
-    
-
-
-
-   
   
     <script>
         $(function () {
@@ -3564,17 +3603,22 @@
         });
 
         $(function () {
+
             $("#slider-range").slider({
                 range: true,
                 min: 5.99,
                 max: 1219.99,
                 values: [5.99, 1219.99],
                 slide: function (event, ui) {
-                    $("#amount").val(ui.values[0] + "Lei" + ui.values[1] + "Lei");
+
+                    $("#pret1").html(ui.values[0] + " Lei");
+                    $("#pret2").html(ui.values[1] + " Lei");
+                    
                 }
             });
-            $("#amount").val($("#slider-range").slider("values", 0) + "Lei"  +
-                    $("#slider-range").slider("values", 1) + "Lei");
+
+            $("#pret1").html($("#slider-range").slider("values", 0) + " Lei");
+            $("#pret2").html($("#slider-range").slider("values", 1) + " Lei");
         });
 
         $(function () {
