@@ -9,9 +9,9 @@
 
     <!-- Tailwind CSS -->
 
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">  
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/6bc6aa4800.js" crossorigin="anonymous"></script>
 
 
 
@@ -19,7 +19,7 @@
 
     <style>
 
-         .first {
+        .first {
             font-variant: small-caps;
         }
 
@@ -35,317 +35,351 @@
 
 </head>
 
-<body>
+<body class="space-y-6 py-8">
 
-    <div class="container mx-auto flex justify-end mt-2 pr-4 lg-pr-0">
+    <div class="container mx-auto flex justify-end space-x-2 pr-4 lg-pr-0">
         <a href="/cv-bootstrap-ro.html"
-            class="bg-red-700 hover:bg-red-600 text-white font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded mr-2">
+            class="px-4 py-2 text-white hover:text-white font-semibold bg-red-700 hover:bg-red-600 border border-red-500 hover:border-transparent rounded">
             Bootstrap
         </a>
         <a href="/cv-tailwind-eng.html" 
-            class="bg-transparent hover:bg-red-600 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
+            class="px-4 py-2 text-red-700 hover:text-white font-semibold hover:bg-red-600 border border-red-500 hover:border-transparent rounded">
             English
         </a>
     </div>
 
-    <div class="container mx-auto px-4">
-
-        <div class="flex flex-col md:flex-row mt-8 items-center">
+    <div class="container mx-auto space-y-6 px-4 lg-px-0">
+        <div class="flex flex-col md:flex-row md:justify-start items-center space-y-2">
             <div class="w-full md:w-1/3">
-                <img class="rounded-full h-auto w-auto mx-auto" src="portofoliu/img/profil.png" alt="avatar">
+                <img class="w-1/2 md:w-2/3 mx-auto rounded-full" src="portofoliu/img/profil.png" alt="avatar">
             </div>
 
             <div class="w-full md:w-2/3 text-center md:text-left">
-                <div class="inline-block md:ml-12">                
-                    <h1 class="text-4xl sm:text-6xl text-black">Alexandra</h1>
-                    <h2 class="text-4xl sm:text-6xl uppercase text-red-600">Cismariu</h1>
-                    <hr class="border-black">
-                    <h3 class="first capitalize text-2xl sm:text-3xl">Programator web junior</h3>
+                <div class="space-y-2 md:ml-12">                
+                    <h1 class="text-4xl md:text-6xl text-black">Alexandra</h1>
+                    <h2 class="text-4xl md:text-6xl text-red-600 uppercase">Cismariu</h1>
+                    <h3 class="inline-block first capitalize text-2xl md:text-3xl border-t border-black">Programator web junior</h3>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row mt-8">
-            <div class="w-full md:w-1/3 h-auto py-6 px-3 lg:px-7">
+        <div class="flex flex-col space-y-6 md:flex-row md:space-y-0">
 
-                <div class="bg-gray-300 p-4">
+            <div class="space-y-6 w-full md:w-1/3 h-auto lg:px-7">
 
-                    <h3 class="text-3xl uppercase text-red-600">Contacts</h3>
-                    <div class="px-3 lg:px-5 mt-5">
-                        <div class="flex justify-start items-center">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-map-marker-alt" style="font-size:30px;color:red"></i>
+                <div class="bg-gray-200 space-y-8 p-4">
+                    <div class="space-y-4">
+                        <h3 class="text-3xl text-red-600 uppercase">Contact</h3>
+                        <div class="space-y-4 px-4 lg:px-6">
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                            
+                                <span>Str. Fabrica de Glucoză 9B, Sector 2, București</span>
                             </div>
-            
-                            <div class="w-full">
-                                <span>Str. Fabrica de Glucoză 9B, District 4, București</span>
+                
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                    </svg>
+                                </div>
+
+                                <span class="break-all">alexandra.g.cismariu@gmail.com</span>
                             </div>
-                        </div>
-            
-                        <div class="flex justify-start items-center mt-5">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-paper-plane" style="font-size:30px;color:red"></i>
-                            </div>
-            
-                            <div class="w-full break-all">
-                                <span>alexandra.g.cismariu@gmail.com</span>
-                            </div>
-                        </div>
-            
-                        <div class="flex justify-start items-center mt-5">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-phone-volume" style="font-size:30px;color:red"></i>
-                            </div>
-            
-                            <div class="w-full">
+                
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                                </div>
+
                                 <span>0756 042 413</span>
                             </div>
                         </div>
                     </div>
-            
-                    <h3 class="text-3xl uppercase text-red-600 mt-8 lg:mt-10">Activities</h3>
-                    <div class="px-3 lg:px-5">
-                        <div class="mt-5">
-                            <div class="capitalize">
-                                <div class="font-bold">Junior mountain guide instructor</div>
-                                <div class="text-gray-700">Christian Adventure</div>
+                    
+                    <div class="space-y-4">
+                        <h3 class="text-3xl text-red-600 uppercase">Activități</h3>
+                        <div class="space-y-4 px-4 lg:px-6">
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <i class="fas fa-hiking text-red-600" style="font-size:26px;"></i>
+                                </div>
+                        
+                                <div class="space-y-2">
+                                    <div class="font-bold">Ghid montan - stagiar</div>
+                                    <div class="text-gray-700">Christian Adventure</div>
+                                </div>
                             </div>
-            
-                            <div class="capitalize mt-5">
-                                <div class="font-bold">First-aid basic life support</div>
-                                <div class="text-gray-700">Atlantykron summer academy</div>
+                        
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <i class="fas fa-first-aid text-red-600" style="font-size:26px;"></i>
+                                </div>
+                        
+                                <div class="space-y-2">
+                                    <div class="font-bold">Curs Prim Ajutor</div>
+                                    <div class="text-gray-700">Academia de vară Atlantykron</div>
+                                </div>
                             </div>
                         </div>
                     </div>
             
-                    <h3 class="text-3xl uppercase text-red-600 mt-8 lg:mt-10">Hobby-uri</h3>
-                    <div class="px-3 lg:px-5">
-                        <div class="flex justify-start items-center mt-5">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-mountain" style="font-size:30px;color:red"></i>
-                            </div>
-            
-                            <div class="capitalize w-full">
+                    <div class="space-y-4">
+                        <h3 class="text-3xl text-red-600 uppercase">Hobby-uri</h3>
+                        <div class="space-y-4 px-4 lg:px-6">
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <i class="fas fa-mountain text-red-600" style="font-size:26px;"></i>
+                                </div>
+                
                                 <span>Drumețiile montane</span>
                             </div>
-                        </div>
-            
-                        <div class="flex justify-start items-center mt-5">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-book" style="font-size:30px;color:red"></i>
-                            </div>
-            
-                            <div class="w-full">
+                
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <i class="fas fa-book text-red-600" style="font-size:26px;"></i>
+                                </div>
+
                                 <span>Lectura</span>
                             </div>
-                        </div>
-            
-                        <div class="flex justify-start items-center mt-5">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-plane" style="font-size:30px;color:red"></i>
-                            </div>
-            
-                            <div class="w-full">
+                
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <i class="fas fa-plane text-red-600" style="font-size:26px;"></i>
+                                </div>
+
                                 <span>Călătoriile</span>
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-3xl uppercase text-red-600  mt-8 lg:mt-10">Cursuri online</h3>
-                    <div class="px-3 lg:px-5">
-                    
-                        <div class="flex justify-start mt-5">
-                            <div class="w-10  flex-shrink-0 mr-3">
-                                <i class="fab fa-free-code-camp" style="font-size:30px;color:red"></i>
+                    <div class="space-y-4">
+                        <h3 class="text-3xl text-red-600 uppercase">Cursuri online</h3>
+                        <div class="space-y-4 px-4 lg:px-6 capitalize">
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 text-center w-10">
+                                    <i class="fab fa-free-code-camp text-red-600" style="font-size:26px;"></i>
+                                </div>
+                        
+                                <div class="break-all">
+                                    <span class="font-bold normal-case">FreeCodeCamp.org</span>
+                                    <p>HTML & CSS responsive web design</p>
+                                </div>
                             </div>
-                    
-                            <div class="w-full">
-                                <span class="font-bold">FreeCodeCamp.org</span>
-                                <p>HTML & CSS responsive web design</p>
+
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 text-center w-10">
+                                    <i class="fas fa-database text-red-600" style="font-size:26px;"></i>
+                                </div>
+                            
+                                <div class="break-all">
+                                    <span class="font-bold normal-case">SQLBolt.com</span>
+                                    <p>SQL Database Management</p>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <div class="flex justify-start mt-5">
-                            <div class="w-10  flex-shrink-0 mr-3">
-                                <i class="fas fa-laptop" style="font-size:30px;color:red"></i>
+                        
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 text-center w-10">
+                                    <i class="fas fa-laptop-code text-red-600" style="font-size:26px;"></i>
+                                </div>
+                        
+                                <div class="break-all">
+                                    <span class="font-bold normal-case">LearnJavascript.online</span>
+                                    <p>Javascript fundamental concepts</p>
+                                </div>
                             </div>
-                    
-                            <div class="w-full">
-                                <span class="font-bold">LearnJavascript.online</span>
-                                <p>Javascript fundamental concepts</p>
+                        
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 text-center w-10">
+                                    <i class="fas fa-laptop-code text-red-600" style="font-size:26px;"></i>
+                                </div>
+                        
+                                <div class="break-all">
+                                    <span class="font-bold normal-case">TutorialRepublic.com</span>
+                                    <p>PHP fundamental concepts</p>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <div class="flex justify-start mt-5">
-                            <div class="w-10  flex-shrink-0 mr-3">
-                                <i class="fas fa-database" style="font-size:30px;color:red"></i>
-                            </div>
-                    
-                            <div class="w-full">
-                                <span class="font-bold">SQLBolt.com</span>
-                                <p>SQL Database Management</p>
-                            </div>
-                        </div>
-                    
-                        <div class="flex justify-start mt-5">
-                            <div class="w-10  flex-shrink-0 mr-3">
-                                <i class="fas fa-laptop-code" style="font-size:30px;color:red"></i>
-                            </div>
-                    
-                            <div class="w-full">
-                                <span class="font-bold">TutorialRepublic.com</span>
-                                <p>PHP fundamental concepts</p>
+
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 text-center w-10">
+                                    <i class="fas fa-laptop-code text-red-600" style="font-size:26px;"></i>
+                                </div>
+                            
+                                <div class="break-all">
+                                    <span class="font-bold normal-case">Laracasts.com</span>
+                                    <p>Laravel 6 & 8 from scratch</p>
+                                    <p>Livewire Basics</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             
-                <div class="flex justify-start my-6">
-                    <i class="fab fa-html5 pr-4" style="font-size:50px;color:red"></i>
-                    <i class="fab fa-css3-alt px-4" style="font-size:50px;color:rgb(45, 129, 224)"></i>
-                    <i class="fab fa-js-square px-4" style="font-size:50px;color:rgb(231, 199, 57)"></i>
-                    <i class="fab fa-bootstrap px-4" style="font-size:50px;color:purple"></i>
-                    <i class="fab fa-php text-center col-2" style="font-size:55px;color: #788abb"></i>
+                <div class="flex justify-start space-x-4">
+                    <i class="fab fa-html5" style="font-size:50px;color:red"></i>
+                    <i class="fab fa-css3-alt" style="font-size:50px;color:rgb(45, 129, 224)"></i>
+                    <i class="fab fa-bootstrap" style="font-size:50px;color:purple"></i>
+                    <i class="fab fa-js-square" style="font-size:50px;color:rgb(231, 199, 57)"></i>
+                    <i class="fab fa-php" style="font-size:50px;color:#788abb"></i>
+                    <i class="fab fa-laravel" style="font-size:50px;color:red"></i>
                 </div>
             </div>
         
             <div class="w-full md:w-2/3">
+                <div class="p-4 md:px-10 space-y-8">
+                    <div class="space-y-4">
+                        <h3 class="text-3xl text-red-600 uppercase">Obiective</h3>
+                        <div class="w-auto text-justify space-y-4 leading-7">
+                            <p class="small-tab md:text-tab">După absolvirea studiilor mi-am propus să aprofundez tehnologiile web. De aceea m-am concentrat pe <b>dezvoltarea continuă a abilităților</b> mele în cele mai moderne tehnologii, având ca obiectiv dezvoltarea de aplicații și pagini web responsive și mobile-friendly, folosind limbaje precum <b>HTML</b>, <b>CSS</b>, <b>Tailwind</b>, <b>JavaScript</b>, <b>PHP</b>, <b>Laravel</b> sau chiar <b>Livewire</b>.</p>
+                        
+                            <p class="small-tab md:text-tab">În urma participării la intership și experienței acumulate ca junior în cadrul unei echipe dinamice și pozitivie am realizat că dezvoltarea mea poate fi mult mai rapidă atunci când am ocazia să lucrez alături de alți oameni pasionați și dispuși să mă îndrume.</p>
 
-                <div class="px-3 md:px-10 py-5">
-
-                    <h3 class="text-3xl uppercase text-red-600">Obiective</h3>
-                    <div class="text-justify leading-7 w-auto pt-6">
-                        <p class="small-tab md:text-tab">Având o formare de inginer am devenit foarte pasionată de dezvoltarea web și sunt într-o continuă căutare de a-mi
-                        <b>dezvolta abilitățile</b> pentru a construi platforme online complexe și atrăgătoare.</p>
-                    
-                        <p class="small-tab md:text-tab">În prezent caut o echipă dinamică din care să fac parte pentru a crește și a-mi <b>îmbunătăți cunoștințele actuale.</b>
-                        Totodată, îmi doresc ca această echipă să fie dispusă să mă primească ca <b>dezvoltator web junior</b> și să mă ajute să
-                        evoluez în acest domeniu fascinant.</p>
+                            <p class="small-tab md:text-tab">Pe viitor m-aș bucura să fac parte din proiecte provocatoare pentru a-mi pune în valoare abilitățile curente și pentru a putea
+                            aprofunda cunoștințele în scenarii reale și care să răspundă unor nevoi de business.</p>
+                        </div>
                     </div>
 
-                    <h3 class="text-3xl uppercase text-red-600 pt-6">Experiență profesională</h3>
-                    <div class="capitalize px-3 md:px-6">
+                    <div class="space-y-4">
+                        <h3 class="text-3xl text-red-600 uppercase">Experiență profesională</h3>
+                        <div class="flex flex-col space-y-4 px-4">
+                            <div class="flex justify-start space-x-2 px-4">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <i class="fas fa-user-tie text-red-600" style="font-size:26px;"></i>
+                                </div>
+                            
+                                <div class="space-y-2 w-full">
+                                    <div class="capitalize">
+                                        <span class="font-bold">ESSENTIA NOESIS S.R.L.</span>
+                                        <p class="text-gray-700">Junior Full Stack Web Developer - <span class="italic">2020-2021 (part time)</span></p>
+                                    </div>
 
-                        <div class="flex justify-start mt-5">
-                            <div class="w-10 text-center mr-3">
-                                <i class="fas fa-user-tie" style="font-size:30px;color:red"></i>
+                                    <p>Am lucrat la diverse aplicații asigurând funcționalități CRUD, implementare migrații, componente Livewire, layout-uri
+                                        folosind Tailwind CSS, sisteme de autentificare, relații Eloquent, inclusiv relații polimorfe.</p>
+                                        
+                                    <p>Am lucrat constant cu tehnologii precum Laravel, Tailwind, Livewire și MySQL.</p>
+                                </div>
                             </div>
 
-                            <div class="capitalize leading-7 w-full">
-                                <span class="font-bold">Internship AgroCity</span>
-                                <p class="text-gray-700">Junior Full Stack Web Developer</p>
-                                <span class="italic">2 luni</span>
-                            </div>
-                        </div>
+                            <div class="flex justify-start space-x-2 px-4">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <i class="fas fa-user-tie text-red-600" style="font-size:26px;"></i>
+                                </div>
 
-                    </div>
-
-                    <h3 class="text-3xl uppercase text-red-600 pt-6">Educație</h3>
-                    <div class="capitalize px-3 md:px-6">
-                        <div class="flex justify-start mt-5">
-                    
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-graduation-cap" style="font-size:30px;color:red"></i>
-                            </div>
-                    
-                            <div class="capitalize leading-7 w-full">
-                                <span class="font-bold">Masterat</span>
-                                <p class="text-gray-700">Universitatea Politehnica din București, București</p>
-                                <span class="italic">2017-2019</span>
-                            </div>
-                        </div>
-                    
-                        <div class="flex justify-start mt-5">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-graduation-cap" style="font-size:30px;color:red"></i>
-                            </div>
-                    
-                            <div class="capitalize leading-7 w-full">
-                                <span class="font-bold">Universitatea Politehnica din București</span>
-                                <p class="text-gray-700">Ingineria Sistemelor Biotehnice</p>
-                                <span class="italic">2013-2017</span>
+                                <div class="space-y-2 w-full">
+                                    <div class="capitalize">
+                                        <span class="font-bold">Internship AgroCity</span>
+                                        <p class="text-gray-700">Junior Full Stack Web Developer - <span class="italic">3 luni</span></p>
+                                    </div>
+                                    <p>Am creat sisteme simple de înregistrare și conectare a utilizatorilor, în urma participării la acest program de
+                                        internship.</p>
+                                    <p>Am lucrat constant cu HTML, Tailwind, PHP și MySQL.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div>
-                        <h3 class="text-3xl uppercase text-red-600 pt-6">Portofoliu</h3>
-                    
-                        <div class="flex justify-start mt-5">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-globe" style="font-size:30px;color:red"></i>
+                    <div class="space-y-4">
+                        <h3 class="text-3xl text-red-600 uppercase">Educație</h3>
+                        <div class="flex flex-col space-y-4 px-4 capitalize">
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <i class="fas fa-graduation-cap text-red-600" style="font-size:26px;"></i>
+                                </div>
+                        
+                                <div class="w-full leading-7">
+                                    <span class="font-bold">Masterat</span>
+                                    <p class="text-gray-700">Universitatea Politehnica din București, București</p>
+                                    <span class="italic">2017-2019</span>
+                                </div>
                             </div>
-                    
-                            <div>
-                                <a class="font-bold text-black hover:underline capitalize" target="_blank" href="/portofoliu/fashion-days.html">Fashion
-                                    days</a>
-                                <p>O replică a unei pagini de rezultate a site-ului <span class="italic">FashionDays.</span>
-                                    <br>Construită cu HTML, CSS, Bootstrap și JavaScript.</p>
-                            </div>
-                        </div>
-                    
-                        <div class="flex justify-start mt-5">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-globe" style="font-size:30px;color:red"></i>
-                            </div>
-                    
-                            <div>
-                                <a class="font-bold text-black hover:underline" target="_blank" href="/portofoliu/emag.html">eMAG</a>
-                                </li>
-                                <p>O replică a unei pagini de rezultate a site-ului <span class="italic">eMAG.</span>
-                                    <br>Construită cu HTML, CSS, Tailwind și JavaScript.</p>
-                            </div>
-                        </div>
-                    
-                        <div class="flex justify-start mt-5">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-globe" style="font-size:30px;color:red"></i>
-                            </div>
-                    
-                            <div>
-                                <a class="font-bold text-black hover:underline" target="_blank"
-                                    href="/portofoliu/decathlon.html">Decathlon</a>
-                                </li>
-                                <p>O replică a unei pagini de rezultate a site-ului <span class="italic">Decathlon.</span>
-                                    <br>Construită cu HTML, CSS, Tailwind și JavaScript.</p>
+                        
+                            <div class="flex justify-start space-x-2">
+                                <div class="flex-shrink-0 self-start text-center w-10">
+                                    <i class="fas fa-graduation-cap text-red-600" style="font-size:26px;"></i>
+                                </div>
+                        
+                                <div class="w-full leading-7">
+                                    <span class="font-bold">Universitatea Politehnica din București</span>
+                                    <p class="text-gray-700">Ingineria Sistemelor Biotehnice</p>
+                                    <span class="italic">2013-2017</span>
+                                </div>
                             </div>
                         </div>
-                    
-                        <div class="flex justify-start mt-5">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-globe" style="font-size:30px;color:red"></i>
-                            </div>
-                    
-                            <div>
-                                <a class="font-bold text-black hover:underline" target="_blank"
-                                    href="/portofoliu/bucurestiul-in-culori.html">Bucureștiul în culori</a>
-                                </li>
-                                <p>Am creat o hartă interactivă integrată, în care am evidențiat sectoarele Bucureștiului (cu
-                                    aproximație), în urma participării la un program de internship la AgroCity.
-                                    <br>Construit cu HTML, CSS, Tailwind și JavaScript.</p>
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="flex justify-start mt-5">
-                            <div class="w-10 flex-shrink-0 mr-3">
-                                <i class="fas fa-globe" style="font-size:30px;color:red"></i>
+                    <div class="space-y-4">
+                        <h3 class="text-3xl text-red-600 uppercase">Portofoliu</h3>
+                        <div class="flex justify-start space-x-2 px-4">
+                            <div class="flex-shrink-0 self-start text-center w-10">
+                                <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
                             </div>
                         
                             <div>
-                                <p class="font-bold text-black">Sistem de autentificare</p>
-                                <p>Am creat un sistem simplu de înregistrare și conectare a utilizatorilor, în urma participării la un program de
-                                internship la AgroCity.
-                                <br>Construită cu HTML, Tailwind, PHP și MySQL.</p>
+                                <a class="font-bold hover:underline" target="_blank" href="/portofoliu/bucurestiul-in-culori.html">Bucureștiul
+                                    în culori</a>
+                                </li>
+                                <p>Am creat o hartă interactivă integrată, în care am evidențiat sectoarele Bucureștiului (cu
+                                    aproximație), în urma participării la un program de internship la AgroCity.
+                                </p>
+                                <p>Construit cu HTML, CSS, Tailwind și JavaScript.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-start space-x-2 px-4">
+                            <div class="flex-shrink-0 self-start text-center w-10">
+                                <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path></svg>
+                            </div>
+                    
+                            <div>
+                                <a class="font-bold hover:underline capitalize" target="_blank" href="/portofoliu/fashion-days.html">Fashion
+                                    days</a>
+                                <p>O replică a unei pagini de rezultate a site-ului <span class="italic">FashionDays.</span></p>
+                                <p>Construită cu HTML, CSS, Bootstrap și JavaScript.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="flex justify-start space-x-2 px-4">
+                            <div class="flex-shrink-0 self-start text-center w-10">
+                                <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path></svg>
+                            </div>
+                    
+                            <div>
+                                <a class="font-bold hover:underline" target="_blank" href="/portofoliu/emag.html">eMAG</a>
+                                </li>
+                                <p>O replică a unei pagini de rezultate a site-ului <span class="italic">eMAG.</span></p>
+                                <p>Construită cu HTML, CSS, Tailwind și JavaScript.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="flex justify-start space-x-2 px-4">
+                            <div class="flex-shrink-0 self-start text-center w-10">
+                                <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path></svg>
+                            </div>
+                    
+                            <div>
+                                <a class="font-bold hover:underline" target="_blank"
+                                    href="/portofoliu/decathlon.html">Decathlon</a>
+                                </li>
+                                <p>O replică a unei pagini de rezultate a site-ului <span class="italic">Decathlon.</span></p>
+                                <p>Construită cu HTML, CSS, Tailwind și JavaScript.</p>
                             </div>
                         </div>
                     </div>
-
                 </div>
-               
             </div>
-        
         </div>
-
     </div>
 
 </body>
